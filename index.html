@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheatsheet Ventilator Neonatus & Pediatrik — IMT Bellavista v3</title>
+<style>
+:root {
+  --bg:#f8f7f4;--card:#fff;--border:#e2e0d8;--border2:#cccab8;
+  --text:#1a1a18;--muted:#6b6a64;
+  --blue:#185FA5;--blue-bg:#E6F1FB;
+  --teal:#0F6E56;--teal-bg:#E1F5EE;
+  --amber:#854F0B;--amber-bg:#FAEEDA;
+  --red:#A32D2D;--red-bg:#FCEBEB;
+  --purple:#534AB7;--purple-bg:#EEEDFE;
+  --coral:#993C1D;--coral-bg:#FAECE7;
+  --green:#3B6D11;--green-bg:#EAF3DE;
+  --gray:#5F5E5A;--gray-bg:#F1EFE8;
+  --r:10px;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#1c1c1a;--card:#242422;--border:#3a3a36;--border2:#4a4a44;
+    --text:#e8e6de;--muted:#9c9a92;
+    --blue:#85B7EB;--blue-bg:#0c2a44;
+    --teal:#5DCAA5;--teal-bg:#083428;
+    --amber:#FAC775;--amber-bg:#2a1c06;
+    --red:#F09595;--red-bg:#2a0e0e;
+    --purple:#AFA9EC;--purple-bg:#1e1c3e;
+    --coral:#F0997B;--coral-bg:#2a1008;
+    --green:#97C459;--green-bg:#152006;
+    --gray:#B4B2A9;--gray-bg:#2c2c2a;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;padding:20px 16px 60px;max-width:1000px;margin:0 auto}
+h1{font-family:Georgia,serif;font-size:22px;font-weight:700;margin-bottom:4px}
+h3{font-size:14px;font-weight:600;margin-bottom:10px}
+.subtitle{color:var(--muted);font-size:13px;margin-bottom:20px}
+.sec{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:6px;margin:28px 0 14px}
+.card{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px}
+.cc{border-radius:var(--r);padding:14px 16px;margin-bottom:10px;border:.5px solid}
+.blue{background:var(--blue-bg);border-color:var(--blue);color:var(--blue)}
+.teal{background:var(--teal-bg);border-color:var(--teal);color:var(--teal)}
+.amber{background:var(--amber-bg);border-color:var(--amber);color:var(--amber)}
+.red{background:var(--red-bg);border-color:var(--red);color:var(--red)}
+.purple{background:var(--purple-bg);border-color:var(--purple);color:var(--purple)}
+.coral{background:var(--coral-bg);border-color:var(--coral);color:var(--coral)}
+.green{background:var(--green-bg);border-color:var(--green);color:var(--green)}
+.gray-c{background:var(--gray-bg);border-color:var(--gray);color:var(--gray)}
+.ct{font-size:13px;font-weight:600;margin-bottom:8px}
+.cc p,.cc li{color:var(--text);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--bg);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;padding:7px 10px;text-align:left;border-bottom:1px solid var(--border)}
+td{padding:8px 10px;border-bottom:.5px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap}
+.bb{background:var(--blue-bg);color:var(--blue)}
+.ba{background:var(--amber-bg);color:var(--amber)}
+.br{background:var(--red-bg);color:var(--red)}
+.bg{background:var(--green-bg);color:var(--green)}
+.bt{background:var(--teal-bg);color:var(--teal)}
+.bp{background:var(--purple-bg);color:var(--purple)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+ul{padding-left:16px}
+ul li{margin-bottom:4px;font-size:13px}
+.rl{color:var(--blue);text-decoration:none;font-size:12px}
+.rl:hover{text-decoration:underline}
+.warn{background:var(--red-bg);border:.5px solid var(--red);border-radius:var(--r);padding:12px 14px;color:var(--red);font-size:13px;margin-bottom:10px}
+.warn strong{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.info{background:var(--blue-bg);border:.5px solid var(--blue);border-radius:var(--r);padding:12px 14px;color:var(--text);font-size:13px;margin-bottom:10px}
+.info strong{color:var(--blue);font-weight:600}
+.step{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:.5px solid var(--border)}
+.step:last-child{border-bottom:none}
+.snum{min-width:24px;height:24px;background:var(--blue-bg);color:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.stitle{font-weight:600;font-size:13px;margin-bottom:2px}
+.sdesc{font-size:12px;color:var(--muted)}
+.ri{padding:10px 0;border-bottom:.5px solid var(--border)}
+.ri:last-child{border-bottom:none}
+.rt{font-weight:600;font-size:13px}
+.rm{color:var(--muted);font-size:12px;margin:2px 0 4px}
+.rd{font-size:12px;color:var(--text)}
+
+/* ===== CALCULATOR STYLES ===== */
+.calc-box{background:var(--card);border:.5px solid var(--blue);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.calc-title{font-size:14px;font-weight:600;color:var(--blue);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.calc-title span{font-size:18px}
+.input-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.input-row label{font-size:13px;color:var(--muted);min-width:130px}
+.input-row input,.input-row select{
+  background:var(--bg);border:.5px solid var(--border2);
+  border-radius:6px;padding:7px 10px;font-size:13px;
+  color:var(--text);width:140px;outline:none;font-family:inherit
+}
+.input-row input:focus,.input-row select:focus{border-color:var(--blue)}
+.input-row .unit{font-size:12px;color:var(--muted)}
+.calc-btn{
+  background:var(--blue);color:#fff;border:none;border-radius:6px;
+  padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;
+  font-family:inherit;transition:opacity .15s
+}
+.calc-btn:hover{opacity:.85}
+.calc-btn-secondary{
+  background:var(--bg);color:var(--blue);border:.5px solid var(--blue);border-radius:6px;
+  padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;
+  font-family:inherit;transition:opacity .15s;margin-left:8px
+}
+.calc-btn-secondary:hover{opacity:.75}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px}
+.result-card{background:var(--bg);border:.5px solid var(--border);border-radius:8px;padding:12px}
+.result-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.result-value{font-size:20px;font-weight:600;color:var(--text)}
+.result-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.result-note{font-size:12px;color:var(--muted);margin-top:6px;font-style:italic}
+.drug-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px}
+.drug-table th{font-size:11px;padding:6px 8px;background:var(--bg);border-bottom:1px solid var(--border);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.drug-table td{padding:7px 8px;border-bottom:.5px solid var(--border)}
+.drug-table tr:last-child td{border-bottom:none}
+.drug-table .drug-name{font-weight:600;color:var(--text)}
+.drug-table .dose-val{font-weight:600;color:var(--blue);font-size:13px}
+.drug-table .vol-val{font-weight:600;color:var(--teal);font-size:13px}
+.hidden{display:none}
+.tab-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.tab-btn{
+  padding:7px 14px;border-radius:6px;font-size:12px;font-weight:600;
+  cursor:pointer;border:.5px solid var(--border2);background:var(--bg);
+  color:var(--muted);font-family:inherit;transition:all .15s
+}
+.tab-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.formula-note{font-size:11px;color:var(--muted);margin-top:6px;padding:8px;background:var(--bg);border-radius:6px;border:.5px solid var(--border)}
+.formula-note strong{color:var(--text)}
+.hbar{background:var(--blue-bg);border:.5px solid var(--blue);border-radius:var(--r);padding:14px 18px;margin-bottom:20px}
+.print-note{font-size:11px;color:var(--muted);margin-top:32px;border-top:1px solid var(--border);padding-top:16px;text-align:center}
+.tag-new{display:inline-block;background:var(--green-bg);color:var(--green);border-radius:4px;font-size:10px;font-weight:700;padding:1px 6px;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle;margin-left:6px}
+
+/* ===== DROPDOWN THEORY STYLES ===== */
+.theory-dropdown{margin-top:10px}
+.theory-btn{
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;background:var(--bg);border:.5px solid var(--border2);
+  border-radius:6px;padding:8px 12px;font-size:12px;font-weight:600;
+  color:var(--muted);cursor:pointer;font-family:inherit;text-align:left;
+  transition:all .15s
+}
+.theory-btn:hover{border-color:var(--blue);color:var(--blue)}
+.theory-btn.open{border-color:var(--blue);color:var(--blue);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.theory-content{
+  border:.5px solid var(--blue);border-top:none;
+  border-bottom-left-radius:6px;border-bottom-right-radius:6px;
+  background:var(--card);padding:12px;font-size:12px;
+  display:none;animation:fadeSlide .15s ease
+}
+.theory-content.visible{display:block}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.theory-content table{font-size:11px}
+.theory-content th{font-size:10px}
+.theory-content li{font-size:12px}
+.chevron{font-size:10px;transition:transform .15s}
+.theory-btn.open .chevron{transform:rotate(180deg)}
+
+/* ===== SYRINGE PUMP STYLES ===== */
+.pump-result{background:var(--teal-bg);border:.5px solid var(--teal);border-radius:8px;padding:12px;margin-top:10px}
+.pump-result .plabel{font-size:11px;color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.pump-result .pval{font-size:18px;font-weight:700;color:var(--teal);margin:2px 0}
+.pump-result .psub{font-size:11px;color:var(--muted)}
+.pump-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:10px}
+
+/* ===== ABG STYLES ===== */
+.abg-result{border-radius:8px;padding:12px;margin-top:8px;border:.5px solid}
+.abg-normal{background:var(--green-bg);border-color:var(--green)}
+.abg-mild{background:var(--amber-bg);border-color:var(--amber)}
+.abg-severe{background:var(--red-bg);border-color:var(--red)}
+.abg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.abg-interp{font-size:13px;font-weight:600;margin-bottom:6px}
+.abg-detail{font-size:12px;color:var(--muted)}
+
+/* ===== SUB-TAB STYLES ===== */
+.subtab-bar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.subtab-btn{
+  padding:5px 12px;border-radius:5px;font-size:11px;font-weight:600;
+  cursor:pointer;border:.5px solid var(--border2);background:var(--bg);
+  color:var(--muted);font-family:inherit;transition:all .15s
+}
+.subtab-btn.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+/* Section dividers inside cards */
+.subsec{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:14px 0 8px;padding-bottom:4px;border-bottom:.5px solid var(--blue-bg)}
+
+/* RSBI highlight */
+.rsbi-box{background:var(--purple-bg);border:.5px solid var(--purple);border-radius:8px;padding:14px;margin-top:10px}
+.rsbi-value{font-size:28px;font-weight:700;color:var(--purple);margin:4px 0}
+.rsbi-interp{font-size:13px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="hbar">
+  <h1>Cheatsheet Ventilator Neonatus & Pediatrik</h1>
+  <p class="subtitle" style="margin-bottom:0">IMT Medical Bellavista 1000/Neo · Panduan Klinis Lengkap · Versi 3 — Mei 2026<br>
+  <span style="color:var(--green);font-weight:600">▲ Baru v3: Teori ETT dropdown, Atrakurium + obat kontinyu + emergensi, Syringe pump kalkulator, ABG interpreter, RSBI/pRSBI, Strategi ventilasi, Teori neonatus & pediatrik</span></p>
+</div>
+
+<!-- ============ TAB NAVIGATION ============ -->
+<div class="tab-bar" id="mainTabs">
+  <button class="tab-btn active" onclick="showTab('calc')">🧮 Kalkulator</button>
+  <button class="tab-btn" onclick="showTab('neo')">👶 Neonatus</button>
+  <button class="tab-btn" onclick="showTab('peds')">🧒 Pediatrik</button>
+  <button class="tab-btn" onclick="showTab('monitor')">📊 Monitoring</button>
+  <button class="tab-btn" onclick="showTab('wean')">🔽 Weaning</button>
+  <button class="tab-btn" onclick="showTab('ref')">📚 Referensi</button>
+</div>
+
+<!-- ============ TAB: KALKULATOR ============ -->
+<div id="tab-calc">
+
+  <!-- SUB-TAB KALKULATOR -->
+  <div class="subtab-bar" id="calcSubTabs">
+    <button class="subtab-btn active" onclick="showCalcSub('ett')">🔬 Kalkulator ETT</button>
+    <button class="subtab-btn" onclick="showCalcSub('drug')">💊 Kalkulator Dosis</button>
+    <button class="subtab-btn" onclick="showCalcSub('rr')">🌬️ RR & Parameter Awal</button>
+  </div>
+
+  <!-- ===== SUBTAB: ETT ===== -->
+  <div id="calcsub-ett">
+  <div class="calc-box">
+    <div class="calc-title"><span>🔬</span> Kalkulator Ukuran ETT — Neonatus & Pediatrik</div>
+
+    <div class="input-row">
+      <label>Jenis pasien</label>
+      <select id="ettPatient" onchange="updateEttForm()">
+        <option value="neo">Neonatus (berdasar BB)</option>
+        <option value="peds">Pediatrik (berdasar usia)</option>
+      </select>
+    </div>
+    <div id="ett-neo-row" class="input-row">
+      <label>Berat Badan</label>
+      <input type="number" id="ettBB" placeholder="cth: 1.5" step="0.1" min="0.3" max="5">
+      <span class="unit">kg</span>
+    </div>
+    <div id="ett-peds-row" class="input-row hidden">
+      <label>Usia</label>
+      <input type="number" id="ettAge" placeholder="cth: 4" step="0.5" min="0" max="16">
+      <span class="unit">tahun</span>
+    </div>
+
+    <button class="calc-btn" onclick="calcETT()">Hitung Ukuran ETT</button>
+
+    <div id="ett-results" class="hidden" style="margin-top:16px">
+      <div class="result-grid" id="ett-result-grid"></div>
+      <div class="formula-note" id="ett-formula-note" style="margin-top:10px"></div>
+    </div>
+
+    <!-- TEORI ETT DROPDOWNS -->
+    <div class="sec" style="margin-top:20px">Teori & Referensi Pemilihan ETT</div>
+
+    <div class="theory-dropdown">
+      <button class="theory-btn" onclick="toggleTheory('ett-formula')">📐 Formula Ukuran ETT — Neonatus vs Pediatrik <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-ett-formula">
+        <div class="subsec">Neonatus (BB-based)</div>
+        <table><tr><th>BB (kg)</th><th>ID Uncuffed</th><th>Catatan</th></tr>
+        <tr><td>&lt; 1 kg</td><td>2.5 mm</td><td>ELBW — sangat prematur</td></tr>
+        <tr><td>1–2 kg</td><td>3.0 mm</td><td>VLBW / prematur sedang</td></tr>
+        <tr><td>2–3 kg</td><td>3.0–3.5 mm</td><td>LBW / term kecil</td></tr>
+        <tr><td>&gt; 3 kg</td><td>3.5 mm</td><td>Term normal</td></tr></table>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">Kedalaman oral neonatus = BB(kg) + 6 cm. Sumber: Goldsmith's 7th Ed 2022; European Consensus Guidelines RDS 2022.</p>
+        <div class="subsec">Pediatrik (Age-based)</div>
+        <table><tr><th>Formula</th><th>ETT</th><th>Catatan</th></tr>
+        <tr><td>(Usia/4) + 3.5</td><td>Cuffed (ID mm)</td><td>Duracher — lebih akurat, trakea elips</td></tr>
+        <tr><td>(Usia/4) + 4</td><td>Uncuffed (ID mm)</td><td>Cole — formula klasik</td></tr>
+        <tr><td>(Usia/2) + 12</td><td>Kedalaman oral (cm)</td><td>Konfirmasi CXR — tip di T2–T3</td></tr></table>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">&lt;6 bln: Cuffed 3.0, Uncuffed 3.5. 6–12 bln: Cuffed 3.5, Uncuffed 4.0. Sumber: PMC9663958; Anesth Pain Med Seoul 2022.</p>
+      </div>
+    </div>
+
+    <div class="theory-dropdown" style="margin-top:6px">
+      <button class="theory-btn" onclick="toggleTheory('ett-cuff')">💡 Cuffed vs Uncuffed — Kapan & Mengapa? <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-ett-cuff">
+        <ul>
+          <li><strong>Neonatus (&lt;28 hari):</strong> Hampir selalu uncuffed. Laring neonatus berbentuk kerucut (conus elasticus), cricoid ring merupakan titik tersempit alami — berfungsi sebagai "anatomical cuff". Cuffed dapat menyebabkan edema subglotik, kompresi mukosa.</li>
+          <li><strong>Bayi prematur &lt;1 kg:</strong> ETT 2.5 mm tidak tersedia versi cuffed — gunakan uncuffed selalu.</li>
+          <li><strong>Pediatrik &gt;2 tahun:</strong> Cuffed makin direkomendasikan (Microcuff, Mallinckrodt). Mencegah aspirasi, mengurangi manipulasi berulang, akurat VT pada compliance rendah (ARDS). Cuff pressure ≤20 cmH₂O.</li>
+          <li><strong>Pertimbangan klinis cuffed:</strong> ARDS berat (butuh PEEP tinggi), compliance sangat rendah, risiko aspirasi tinggi, operasi laparoskopi.</li>
+        </ul>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">Sumber: Weiss M, et al. BJA 2009; De Orange FA, Cochrane 2017.</p>
+      </div>
+    </div>
+
+    <div class="theory-dropdown" style="margin-top:6px">
+      <button class="theory-btn" onclick="toggleTheory('ett-confirm')">✅ Konfirmasi Posisi ETT & Kedalaman Optimal <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-ett-confirm">
+        <div class="subsec">Metode Konfirmasi (Prioritas Urutan)</div>
+        <ol style="padding-left:16px">
+          <li style="margin-bottom:4px;font-size:12px"><strong>Capnografi kuantitatif (ETCO₂)</strong> — gold standard. Konfirmasi langsung masuk trakea. Waveform CO₂ 3–5 siklus.</li>
+          <li style="margin-bottom:4px;font-size:12px"><strong>Colorimetric CO₂ detector</strong> — berubah warna kuning = trakea. Sensitif tapi bisa false negatif jika output rendah.</li>
+          <li style="margin-bottom:4px;font-size:12px"><strong>Auskultasi bilateral aksila</strong> — dengar suara napas simetris. Konfirmasi tidak masuk esofagus (bunyi borborygmi).</li>
+          <li style="margin-bottom:4px;font-size:12px"><strong>Chest X-ray segera post-intubasi</strong> — tip ETT harus di T2–T3 (1–2 cm di atas carina). Standar NICU/PICU.</li>
+        </ol>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">⚠ Neonatus: posisi kepala mempengaruhi kedalaman ETT (fleksi → ETT masuk lebih dalam ±1 cm; ekstensi → keluar). Verifikasi ulang setelah reposisi.</p>
+      </div>
+    </div>
+
+    <div class="theory-dropdown" style="margin-top:6px">
+      <button class="theory-btn" onclick="toggleTheory('ett-special')">⚠ Kondisi Khusus & Pertimbangan Ukuran ETT <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-ett-special">
+        <table>
+          <tr><th>Kondisi</th><th>Modifikasi</th></tr>
+          <tr><td>Pierre Robin, micrognathia</td><td>Pertimbangkan ETT 0.5 mm lebih kecil; laringoskop miller; siapkan LMA rescue</td></tr>
+          <tr><td>Subglotik stenosis</td><td>Gunakan ETT 1 size lebih kecil dari prediksi</td></tr>
+          <tr><td>Sindrom Down</td><td>Trakea lebih sempit — gunakan 0.5–1 size lebih kecil</td></tr>
+          <tr><td>Post-operasi jantung</td><td>Pertimbangkan cuffed meski bayi; hindari manipulasi berulang</td></tr>
+          <tr><td>Malnutrisi berat (BB rendah)</td><td>Gunakan formula BB, bukan usia</td></tr>
+          <tr><td>Obesitas pediatrik</td><td>Gunakan IBW (ideal body weight) untuk formula, bukan actual BB</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  </div><!-- /calcsub-ett -->
+
+  <!-- ===== SUBTAB: DRUG ===== -->
+  <div id="calcsub-drug" class="hidden">
+  <div class="calc-box">
+    <div class="calc-title"><span>💊</span> Kalkulator Dosis Obat — RSI, Sedasi Kontinyu, Emergensi & Life Support</div>
+
+    <div class="input-row">
+      <label>Jenis pasien</label>
+      <select id="drugPatient" onchange="updateDrugForm()">
+        <option value="neo">Neonatus</option>
+        <option value="peds">Pediatrik</option>
+      </select>
+    </div>
+    <div class="input-row">
+      <label>Berat Badan</label>
+      <input type="number" id="drugBB" placeholder="cth: 2.5" step="0.1" min="0.3" max="80">
+      <span class="unit">kg</span>
+    </div>
+    <div id="drug-ga-row" class="input-row">
+      <label>Usia gestasi / PCA</label>
+      <select id="drugGA">
+        <option value="preterm">&lt;37 minggu (preterm)</option>
+        <option value="term">≥37 minggu (term / PCA ≥37)</option>
+      </select>
+    </div>
+    <div id="drug-age-row" class="input-row hidden">
+      <label>Usia</label>
+      <input type="number" id="drugAge" placeholder="cth: 2" step="0.5" min="0" max="16">
+      <span class="unit">tahun</span>
+    </div>
+    <div class="input-row">
+      <label>Tampilkan</label>
+      <select id="drugCategory">
+        <option value="rsi">Premedikasi & RSI</option>
+        <option value="cont">Sedasi/Analgesik Kontinyu (Infus/SP)</option>
+        <option value="emerg">Obat Emergensi & Life Support</option>
+      </select>
+    </div>
+
+    <button class="calc-btn" onclick="calcDrugs()">Hitung Dosis</button>
+
+    <div id="drug-results" class="hidden" style="margin-top:16px">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px" id="drug-context"></p>
+      <table class="drug-table">
+        <thead>
+          <tr id="drug-thead-row">
+            <th>Obat</th><th>Dosis (mg/kg atau mcg/kg)</th><th>Dosis Total</th><th>Konsentrasi Std</th><th>Volume</th><th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody id="drug-tbody"></tbody>
+      </table>
+      <div class="warn" style="margin-top:10px;margin-bottom:0">
+        <strong>⚠ Peringatan Klinis</strong>
+        Dosis ini merupakan panduan awal berbasis berat badan. Selalu konfirmasi dengan SpA/neonatologis/SpAn. Siapkan antidot (nalokson untuk opioid, sugammadex untuk rocuronium, flumazenil untuk benzodiazepine). Dosis obat vasoaktif: titrasi per respon klinis.
+      </div>
+    </div>
+
+    <!-- SYRINGE PUMP KALKULATOR -->
+    <div id="syringepump-section" class="hidden" style="margin-top:16px">
+      <div class="sec">Kalkulator Syringe Pump — Obat Kontinyu</div>
+      <div class="info">
+        <strong>Cara pakai:</strong> Setelah hitung dosis, pilih obat dan masukkan target dosis untuk mendapatkan kecepatan syringe pump (mL/jam).
+      </div>
+      <div class="input-row">
+        <label>Pilih obat</label>
+        <select id="spDrug" onchange="updateSpForm()" style="width:180px">
+          <option value="">-- pilih obat --</option>
+          <!-- diisi dinamis oleh JS -->
+        </select>
+      </div>
+      <div class="input-row" id="sp-dose-row">
+        <label id="sp-dose-label">Dosis target</label>
+        <input type="number" id="spDose" step="0.1" style="width:100px">
+        <span class="unit" id="sp-unit">mcg/kg/mnt</span>
+      </div>
+      <div class="input-row">
+        <label>Konsentrasi larutan</label>
+        <input type="number" id="spConc" step="0.01" placeholder="cth: 0.1">
+        <span class="unit" id="sp-conc-unit">mg/mL</span>
+      </div>
+      <div class="input-row">
+        <label>Berat Badan (kg)</label>
+        <input type="number" id="spBB" step="0.1" placeholder="auto dari atas">
+      </div>
+      <button class="calc-btn" onclick="calcSyringePump()">Hitung Kecepatan Pump</button>
+      <div id="sp-result" class="hidden">
+        <div class="pump-grid" id="sp-result-grid"></div>
+        <div class="formula-note" id="sp-formula-note" style="margin-top:8px"></div>
+      </div>
+      <!-- Panduan pengenceran standar -->
+      <div class="theory-dropdown" style="margin-top:12px">
+        <button class="theory-btn" onclick="toggleTheory('sp-dilution')">🧪 Panduan Pengenceran Standar Obat Kontinyu <span class="chevron">▼</span></button>
+        <div class="theory-content" id="theory-sp-dilution">
+          <table>
+            <tr><th>Obat</th><th>Konsentrasi Standar</th><th>Cara Larutkan</th><th>Catatan</th></tr>
+            <tr><td>Morfin</td><td>0.1–0.5 mg/mL</td><td>Encerkan dg NS atau D5W</td><td>Stabill 24 jam, hindari cahaya</td></tr>
+            <tr><td>Fentanil</td><td>5–10 mcg/mL (neo), 10–50 mcg/mL (peds)</td><td>Encerkan dg NS</td><td>Adsorpsi ke PVC, pakai non-PVC line jika ada</td></tr>
+            <tr><td>Midazolam</td><td>0.1–0.5 mg/mL</td><td>Encerkan dg NS atau D5W</td><td>Fotosensitif</td></tr>
+            <tr><td>Ketamin</td><td>1–2 mg/mL</td><td>Encerkan dg NS atau D5W</td><td>Pisahkan dari benzodiazepine (presipitasi)</td></tr>
+            <tr><td>Propofol</td><td>10 mg/mL (ready to use)</td><td>Tidak diencerkan</td><td>Kontraindikasi &lt;1 mth; hindari &lt;3 thn infus &gt;48 jam (PRIS)</td></tr>
+            <tr><td>Atrakurium</td><td>0.5–1 mg/mL</td><td>Encerkan dg NS (bukan RL — presipitasi)</td><td>Simpan kulkas, tidak perlu reversal. Cocok gagal ginjal/hati</td></tr>
+            <tr><td>Vekuronium</td><td>0.1 mg/mL</td><td>Rekonstituasi + encerkan dg NS</td><td>Akumulasi pada gagal ginjal</td></tr>
+            <tr><td>Epinefrin</td><td>4–40 mcg/mL</td><td>Encerkan dg D5W/NS: 1 mg/250mL = 4 mcg/mL</td><td>Tidak stabil dg NaHCO₃</td></tr>
+            <tr><td>Norepinefrin</td><td>4–40 mcg/mL</td><td>Encerkan dg D5W: 4 mg/100mL = 40 mcg/mL</td><td>Hindari NS jika lama (degradasi)</td></tr>
+            <tr><td>Dopamin</td><td>400–800 mcg/mL</td><td>200 mg/250mL D5W = 800 mcg/mL</td><td>Inkompatibel dg NaHCO₃, ampisilin</td></tr>
+            <tr><td>Dobutamin</td><td>1–4 mg/mL</td><td>250 mg/250mL D5W = 1 mg/mL</td><td>Stabilitas 24 jam suhu ruang</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div><!-- /calcsub-drug -->
+
+  <!-- ===== SUBTAB: RR & PARAMETER ===== -->
+  <div id="calcsub-rr" class="hidden">
+  <div class="calc-box">
+    <div class="calc-title"><span>🌬️</span> Tabel Rate (RR) & Parameter Ventilator Berdasarkan Usia</div>
+    <div class="info" style="margin-bottom:12px">
+      <strong>Sumber:</strong> Flemming et al. Lancet 2011; Case-Based Pediatrics Hawaii; PEMVECC Guidelines 2017; Goldsmith's 7th Ed 2022.
+    </div>
+    <table>
+      <tr>
+        <th>Kelompok Usia</th>
+        <th>RR Normal (napas/mnt)</th>
+        <th>RR Ventilator (set)</th>
+        <th>VT Target</th>
+        <th>Tins (Ti)</th>
+        <th>PEEP Awal</th>
+        <th>PIP Awal</th>
+      </tr>
+      <tr>
+        <td><strong>Preterm &lt;32 mgg</strong></td><td>40–60</td>
+        <td><span class="badge bb">40–60 bpm</span></td>
+        <td>4–5 mL/kg</td><td>0.30–0.35 det</td><td>5–6 cmH₂O</td><td>18–22 cmH₂O</td>
+      </tr>
+      <tr>
+        <td><strong>Neonatus Term</strong></td><td>40–60</td>
+        <td><span class="badge bb">40–60 bpm</span></td>
+        <td>5–6 mL/kg</td><td>0.35–0.40 det</td><td>4–5 cmH₂O</td><td>15–20 cmH₂O</td>
+      </tr>
+      <tr>
+        <td><strong>Bayi 1–12 bln</strong></td><td>30–50</td>
+        <td><span class="badge bt">25–35 bpm</span></td>
+        <td>6–8 mL/kg</td><td>0.40–0.50 det</td><td>4–5 cmH₂O</td><td>15–20 cmH₂O</td>
+      </tr>
+      <tr>
+        <td><strong>Anak 1–5 thn</strong></td><td>25–40</td>
+        <td><span class="badge ba">20–30 bpm</span></td>
+        <td>6–8 mL/kg</td><td>0.50–0.70 det</td><td>4–5 cmH₂O</td><td>15–22 cmH₂O</td>
+      </tr>
+      <tr>
+        <td><strong>Anak 5–12 thn</strong></td><td>20–30</td>
+        <td><span class="badge ba">15–20 bpm</span></td>
+        <td>6–8 mL/kg</td><td>0.70–1.00 det</td><td>4–5 cmH₂O</td><td>15–22 cmH₂O</td>
+      </tr>
+      <tr>
+        <td><strong>Remaja &gt;12 thn</strong></td><td>12–20</td>
+        <td><span class="badge bg">10–15 bpm</span></td>
+        <td>6–8 mL/kg</td><td>1.00–1.50 det</td><td>5 cmH₂O</td><td>15–25 cmH₂O</td>
+      </tr>
+    </table>
+    <div class="formula-note" style="margin-top:10px">
+      <strong>Catatan:</strong> RR ventilator biasanya lebih rendah dari RR spontan normal karena VT yang diberikan lebih besar. Minute ventilation = VT × RR. Sesuaikan rate berdasarkan PaCO₂ dan klinis, bukan hanya target angka.
+    </div>
+
+    <!-- TEORI DROPDOWN: Strategi PEEP & VT -->
+    <div class="theory-dropdown" style="margin-top:14px">
+      <button class="theory-btn" onclick="toggleTheory('strat-lowpeep')">📖 Teori: Prinsip Lung-Protective Ventilation (LPV) <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-strat-lowpeep">
+        <ul>
+          <li><strong>Volutrauma:</strong> VT berlebihan (&gt;8 mL/kg) → overdistensi alveolar → inflamasi → VILI (Ventilator Induced Lung Injury). Target VT 4–6 mL/kg (ARDS) atau 4–8 mL/kg (kondisi lain).</li>
+          <li><strong>Atelektrauma:</strong> PEEP terlalu rendah → alveoli kolaps berulang-buka → "shear stress". Solusi: PEEP optimal mencegah kolaps di akhir ekspirasi.</li>
+          <li><strong>Barotrauma:</strong> Pplat &gt;28–30 cmH₂O → pneumotoraks, PIE. Monitor plateau pressure (inspiratory hold).</li>
+          <li><strong>Biotrauma:</strong> Peregangan mekanik memicu sitokin (IL-6, IL-8, TNF-α) → MSOF. LPV mengurangi biotrauma.</li>
+          <li><strong>Permissive hypercapnia:</strong> Terima PaCO₂ hingga 55–60 (peds) atau 65 (neo CDH/MAS) asal pH &gt;7.20–7.25 untuk menghindari LPV trade-off.</li>
+        </ul>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">Sumber: ARDSnet 2000; PEMVECC 2017; Amato MB, NEJM 2015.</p>
+      </div>
+    </div>
+
+    <div class="theory-dropdown" style="margin-top:6px">
+      <button class="theory-btn" onclick="toggleTheory('strat-highpeep')">📖 Strategi: High PEEP / Low VT vs Low PEEP / High VT <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-strat-highpeep">
+        <table>
+          <tr><th>Strategi</th><th>Kapan Digunakan</th><th>PEEP</th><th>VT</th><th>Risiko</th></tr>
+          <tr><td><strong>High PEEP / Low VT</strong></td><td>ARDS moderate-berat, collapse-prone (pneumonia difus, PARDS)</td><td>8–15 cmH₂O</td><td>4–6 mL/kg IBW</td><td>Hemodinamik (↓CO jika PEEP berlebih), overdistensi jika compliance tinggi</td></tr>
+          <tr><td><strong>Low PEEP / Low VT</strong></td><td>ARDS ringan, paru homogen, atau compliance masih baik</td><td>5–8 cmH₂O</td><td>6–8 mL/kg IBW</td><td>Atelektasis jika PEEP terlalu rendah</td></tr>
+          <tr><td><strong>Low PEEP / High VT</strong> (↕)</td><td>Obstruksi (asma, MAS) — hindari air trapping</td><td>0–5 cmH₂O</td><td>6–8 mL/kg</td><td>Dynamic hyperinflation, barotrauma bila ekspirasi tidak cukup</td></tr>
+          <tr><td><strong>High PEEP Neonatus RDS</strong></td><td>RDS, atelektasis, kolaps alveoli surfaktan-defisiensi</td><td>5–7 cmH₂O</td><td>4–5 mL/kg</td><td>Overdistensi preterm jika terlalu tinggi</td></tr>
+        </table>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">⚠ Tidak ada strategi universal. Titrasi selalu berdasar respon klinis, ABG, compliance dinamis, dan waveform ventilator. PEEP optimal = PEEP tertinggi yang tidak menurunkan compliance atau hemodinamik.</p>
+      </div>
+    </div>
+
+    <div class="theory-dropdown" style="margin-top:6px">
+      <button class="theory-btn" onclick="toggleTheory('strat-modes')">📖 Mode Ventilasi — Perbedaan & Indikasi Klinis <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-strat-modes">
+        <table>
+          <tr><th>Mode</th><th>Kontrol</th><th>Indikasi Utama</th><th>Keunggulan</th><th>Kelemahan</th></tr>
+          <tr><td><strong>VC-AC</strong></td><td>Volume</td><td>ARDS, gagal napas akut, post-arrest</td><td>VT konsisten, minute ventilation terjamin</td><td>Tekanan bervariasi (bahaya jika compliance ↓)</td></tr>
+          <tr><td><strong>PC-AC</strong></td><td>Tekanan</td><td>Neonatus, PPHN, MAS, CDH</td><td>Waveform deselerasi (lebih fisiologis), distribusi gas merata</td><td>VT bervariasi jika compliance berubah</td></tr>
+          <tr><td><strong>SIMV-PC</strong></td><td>Tekanan + spontan</td><td>Weaning, RDS preterm, apnea prematurity</td><td>Sinkronisasi nafas spontan, weaning bertahap</td><td>Lebih kompleks; WOB meningkat jika support rendah</td></tr>
+          <tr><td><strong>PSV (Pressure Support)</strong></td><td>Tekanan per napas spontan</td><td>Weaning, SBT, napas spontan aktif</td><td>Sinkronisasi sempurna, WOB minimal</td><td>Tidak ada backup rate — butuh drive napas adekuat</td></tr>
+          <tr><td><strong>PRVC/VCPC</strong></td><td>Volume-targeted, pressure-limited</td><td>ARDS pediatrik, paru-paru tidak homogen</td><td>Kombinasi keunggulan VC + PC; VT konsisten, tekanan minimal</td><td>Butuh ventilator khusus; setting lebih kompleks</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="theory-dropdown" style="margin-top:6px">
+      <button class="theory-btn" onclick="toggleTheory('strat-ie')">📖 I:E Ratio — Fisiologi & Strategi Klinis <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-strat-ie">
+        <ul>
+          <li><strong>Normal:</strong> I:E = 1:2 — fisiologis, ekspirasi sedikit lebih panjang dari inspirasi.</li>
+          <li><strong>RDS / PPHN:</strong> I:E = 1:1 atau 1:1.5 — Tins lebih panjang → rekruitmen alveoli kolaps. Hati-hati auto-PEEP jika terlalu panjang Tins.</li>
+          <li><strong>Obstruksi (Asma, MAS):</strong> I:E = 1:3–1:5 — ekspirasi panjang, mencegah air trapping dan dynamic hyperinflation. Monitor: chest rise kembali sempurna sebelum napas berikutnya.</li>
+          <li><strong>Time constant (τ):</strong> τ = R × C. Tins optimal ≥ 3–5τ. Preterm: τ pendek (≈ 0.05 det) → Tins 0.25–0.35 det. Anak: τ lebih panjang → Tins 0.5–1.5 det.</li>
+          <li><strong>Auto-PEEP / Air Trapping:</strong> Terjadi jika Teks &lt; 3τ. Deteksi: ekspiratory hold → Paw tidak kembali ke nol sebelum napas berikutnya.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  </div><!-- /calcsub-rr -->
+
+</div><!-- /tab-calc -->
+
+<!-- ============ TAB: NEONATUS ============ -->
+<div id="tab-neo" class="hidden">
+
+  <!-- DROPDOWN TEORI NEONATUS -->
+  <div class="theory-dropdown" style="margin-bottom:12px">
+    <button class="theory-btn" onclick="toggleTheory('neo-patofis')">📖 Patofisiologi Dasar Paru Neonatus & Indikasi Ventilasi <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-neo-patofis">
+      <ul>
+        <li><strong>Surfaktan:</strong> Diproduksi pneumosit tipe II, matur ~34–36 mgg. Defisiensi → kolaps alveoli → RDS. Surfaktan endogen ↑ dengan kortikosteroid antenatal.</li>
+        <li><strong>Mekanik paru neonatus:</strong> Compliance paru rendah, chest wall compliance sangat tinggi → mudah kolaps, mudah overdistensi. Volume closing &gt; FRC → atelectasis saat FRC turun.</li>
+        <li><strong>Kontrol napas:</strong> Immatur di preterm → apnea sentral/obstruktif. Kafeina meningkatkan sensitivitas kemoreseptor CO₂.</li>
+        <li><strong>Transisi ekstrauterin:</strong> Fetal lung fluid harus diserap dalam menit–jam pertama. Gangguan → TTN (Transient Tachypnea of Newborn). C-section tanpa kontraksi → lebih lambat.</li>
+        <li><strong>Indikasi ventilasi mekanik:</strong> pH &lt;7.20 + PaCO₂ &gt;60 (gagal napas tipe II) · SpO₂ &lt;85% meski FiO₂ 1.0 via CPAP · Apnea berat/henti napas · Syok + gagal napas · CPAP failure (FiO₂ &gt;0.40–0.50).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="theory-dropdown" style="margin-bottom:12px">
+    <button class="theory-btn" onclick="toggleTheory('neo-cpap')">📖 CPAP Failure — Kriteria & Eskalasi ke Ventilasi Mekanik <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-neo-cpap">
+      <table>
+        <tr><th>Kriteria CPAP Failure</th><th>Ambang</th></tr>
+        <tr><td>FiO₂ kebutuhan</td><td>&gt;0.40–0.50 untuk SpO₂ 91–95%</td></tr>
+        <tr><td>Apnea</td><td>&gt;2–3 episode / jam butuh stimulasi, atau 1 episode butuh PPV</td></tr>
+        <tr><td>Asidosis respiratorik</td><td>pH &lt;7.20, PaCO₂ &gt;60 mmHg refrakter</td></tr>
+        <tr><td>Retraksi berat + takipnea</td><td>RR &gt;80 + retraksi berat + SaO₂ tidak stabil</td></tr>
+        <tr><td>Surfaktan diperlukan</td><td>INSURE/LISA mungkin cukup — diskusi neonatologis</td></tr>
+      </table>
+      <p style="font-size:11px;color:var(--muted);margin-top:6px">INSURE = Intubate-Surfactant-Extubate. LISA = Less Invasive Surfactant Administration (tanpa intubasi, via thin catheter saat CPAP). Sumber: European Consensus Guidelines 2022.</p>
+    </div>
+  </div>
+
+  <div class="theory-dropdown" style="margin-bottom:16px">
+    <button class="theory-btn" onclick="toggleTheory('neo-oxi')">📖 Target Oksigenasi & SpO₂ per Kondisi Neonatus <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-neo-oxi">
+      <table>
+        <tr><th>Kondisi</th><th>SpO₂ Target</th><th>PaO₂ (mmHg)</th><th>Dasar Pemilihan</th></tr>
+        <tr><td>Preterm &lt;32 mgg (RDS)</td><td>90–95%</td><td>45–65</td><td>Hindari ROP; hiperoksia meningkatkan BPD</td></tr>
+        <tr><td>Term / ≥32 mgg</td><td>91–95%</td><td>50–80</td><td>Standar</td></tr>
+        <tr><td>PPHN</td><td>≥95% preductal</td><td>80–100</td><td>Vasodilatasi paru — butuh PaO₂ tinggi</td></tr>
+        <tr><td>CDH</td><td>≥85% preductal</td><td>&gt;50 preductal</td><td>Permissive; hindari hiperoksia agresif</td></tr>
+        <tr><td>HIE / TH</td><td>91–95%</td><td>60–80</td><td>Hindari hiperoksia — otak cedera; koreksi alpha-stat suhu</td></tr>
+        <tr><td>Preterm post-ekstubasi</td><td>91–95%</td><td>—</td><td>Sama dengan saat ventilasi</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">1. Indikasi Ventilasi Mekanik Neonatus</div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Indikasi Absolut</h3>
+      <ul>
+        <li>Apnea berat / henti napas</li>
+        <li>Gagal napas tipe II: pH &lt;7.20, PaCO₂ &gt;60 mmHg</li>
+        <li>SpO₂ &lt;85% meski FiO₂ 1.0 via CPAP</li>
+        <li>Syok berat disertai gagal napas</li>
+        <li>Pasca operasi mayor (CDH, atresia esofagus)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Indikasi Relatif</h3>
+      <ul>
+        <li>CPAP failure: FiO₂ &gt;0.40–0.50 untuk SpO₂ target</li>
+        <li>Retraksi berat, takipnea progresif</li>
+        <li>RDS berat — butuh surfaktan (INSURE/LISA)</li>
+        <li>Apnea berulang tidak respons kafein</li>
+        <li>PPHN berat (butuh iNO)</li>
+        <li>Instabilitas hemodinamik berat</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">2. Setting per Kondisi Klinis — IMT Bellavista Neonatus</div>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Pins = PIP pada Bellavista. Psupport dihitung <em>di atas</em> PEEP. TargetVent = Volume Guarantee (VG).</p>
+
+  <div class="cc blue">
+    <div class="ct">① RDS — Preterm</div>
+    <table><tr><th>Parameter</th><th>Nilai Awal</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>SIMV-PC + TargetVent</td><td>VG → lindungi dari volutrauma</td></tr>
+    <tr><td>Pins (PIP)</td><td>18–22 cmH₂O</td><td>Minimal untuk chest rise; ≤25 max</td></tr>
+    <tr><td>Psupport</td><td>8–12 cmH₂O</td><td>Napas spontan di antara mandatory</td></tr>
+    <tr><td>PEEP</td><td>5–6 cmH₂O</td><td>↑6–7 jika atelektasis persisten</td></tr>
+    <tr><td>Rate</td><td>40–60 bpm</td><td>Permissive hypercapnia PaCO₂ 45–55</td></tr>
+    <tr><td>Tins</td><td>0.30–0.35 det</td><td>Time constant pendek — hindari air trap</td></tr>
+    <tr><td>Flow trig</td><td>0.5–1.0 L/mnt</td><td>Sensitif untuk preterm</td></tr>
+    <tr><td>FiO₂</td><td>0.4–0.6</td><td>Target SpO₂ 90–95% (&lt;32 mgg)</td></tr>
+    <tr><td>VT (TargetVent)</td><td>4–5 mL/kg</td><td>≤6 mL/kg; monitor di display</td></tr></table>
+    <p style="font-size:11px;margin-top:8px;color:var(--muted)">📚 European Consensus Guidelines RDS 2022 · PMC10064400</p>
+  </div>
+
+  <div class="cc amber">
+    <div class="ct">② MAS (Meconium Aspiration Syndrome)</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>SIMV-PC atau AC-PC</td><td>Hindari auto-PEEP</td></tr>
+    <tr><td>Pins (PIP)</td><td>20–28 cmH₂O</td><td>Obstruksi parsial → perlu lebih tinggi</td></tr>
+    <tr><td>PEEP</td><td>3–5 cmH₂O</td><td>RENDAH — cegah hiperinflasi</td></tr>
+    <tr><td>Rate</td><td>30–50 bpm</td><td>Lebih lambat → ekspirasi cukup</td></tr>
+    <tr><td>Tins</td><td>0.35–0.50 det</td><td>Lebih panjang untuk distribusi gas</td></tr>
+    <tr><td>I:E ratio</td><td>1:3 atau 1:4</td><td>Ekspirasi panjang → cegah air trap</td></tr>
+    <tr><td>FiO₂</td><td>Sesuai SpO₂</td><td>Target SpO₂ 94–98% (term)</td></tr></table>
+    <div class="warn" style="margin-top:10px;margin-bottom:0"><strong>⚠ Waspada Pneumotoraks</strong>Lebih sering pada MAS akibat air trapping. Monitor asimetri gerak dada &amp; CXR berkala. Pertimbangkan HFOV jika conventional gagal.</div>
+  </div>
+
+  <div class="cc purple">
+    <div class="ct">③ PPHN</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>AC-PC atau SIMV-PC</td><td>Sinkronisasi baik → kurangi PVR</td></tr>
+    <tr><td>Pins (PIP)</td><td>20–25 cmH₂O</td><td>Minimal yang cukup untuk VT adekuat</td></tr>
+    <tr><td>PEEP</td><td>4–5 cmH₂O</td><td>Hindari overdistensi (↑PVR)</td></tr>
+    <tr><td>Rate</td><td>40–60 bpm</td><td>Normocapnia: PaCO₂ 35–45 mmHg</td></tr>
+    <tr><td>FiO₂</td><td>0.8–1.0 awal</td><td>Target PaO₂ 80–100 mmHg</td></tr>
+    <tr><td>iNO</td><td>20 ppm</td><td>Vasodilator selektif paru</td></tr></table>
+  </div>
+
+  <div class="cc coral">
+    <div class="ct">④ CDH (Congenital Diaphragmatic Hernia)</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>PC · Gentle ventilation</td><td>Paru hipoplastik — barotrauma mudah</td></tr>
+    <tr><td>Pins (PIP)</td><td>&lt;25 cmH₂O</td><td>Sangat berhati-hati</td></tr>
+    <tr><td>PEEP</td><td>3–5 cmH₂O</td><td>Rendah — cegah overdistensi kontralateral</td></tr>
+    <tr><td>Rate</td><td>40–60 bpm</td><td>Permissive hypercapnia PaCO₂ 45–65</td></tr>
+    <tr><td>SpO₂ preductal</td><td>&gt;85%</td><td>Postductal &gt;70% (R→L shunting)</td></tr></table>
+    <div class="warn" style="margin-top:10px;margin-bottom:0"><strong>⚠ CDH: Gentle Ventilation</strong>JANGAN target SpO₂ 100% atau normocapnia agresif. Terima permissive hypercapnia. Pertimbangkan ECMO jika OI &gt;40.</div>
+  </div>
+
+  <div class="cc teal">
+    <div class="ct">⑤ HIE / Birth Asphyxia + Therapeutic Hypothermia</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>AC-PC atau SIMV-PC</td><td>Sinkronisasi baik</td></tr>
+    <tr><td>Pins (PIP)</td><td>15–22 cmH₂O</td><td>Sesuaikan compliance paru</td></tr>
+    <tr><td>PEEP</td><td>4–5 cmH₂O</td><td>Standar</td></tr>
+    <tr><td>PaCO₂</td><td>40–50 mmHg</td><td>⚠ Hindari hipokapnia &lt;35 → vasokonstriksi serebral</td></tr>
+    <tr><td>PaO₂</td><td>60–80 mmHg</td><td>Hindari hiperoksia pada otak cedera</td></tr>
+    <tr><td>Suhu</td><td>33–34°C (TH)</td><td>Koreksi PCO₂ berdasar suhu (alpha-stat)</td></tr></table>
+  </div>
+
+  <div class="cc green">
+    <div class="ct">⑥ Apnea of Prematurity — Refrakter CPAP/Kafein</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>SIMV-PC + PSV</td><td>Backup rate untuk apnea</td></tr>
+    <tr><td>Pins (PIP)</td><td>12–16 cmH₂O</td><td>Paru relatif normal</td></tr>
+    <tr><td>Psupport</td><td>8–10 cmH₂O</td><td>Support napas spontan</td></tr>
+    <tr><td>PEEP</td><td>4–5 cmH₂O</td><td>Pertahankan FRC</td></tr>
+    <tr><td>Rate</td><td>20–30 bpm</td><td>Rendah — biarkan napas spontan dominan</td></tr>
+    <tr><td>FiO₂</td><td>0.21–0.30</td><td>SpO₂ 90–95%</td></tr></table>
+  </div>
+
+  <div class="sec">3. Target ABG per Kondisi</div>
+  <div class="card">
+    <table><tr><th>Kondisi</th><th>pH</th><th>PaO₂ (mmHg)</th><th>PaCO₂ (mmHg)</th><th>SpO₂</th></tr>
+    <tr><td>Preterm &lt;32 mgg (RDS)</td><td>7.25–7.35</td><td>45–65</td><td>45–55 <span class="badge ba">permissive</span></td><td>90–95%</td></tr>
+    <tr><td>Term / ≥32 mgg</td><td>7.30–7.40</td><td>50–80</td><td>40–50</td><td>91–95%</td></tr>
+    <tr><td>PPHN</td><td>7.35–7.45</td><td>80–100</td><td>35–45 <span class="badge bb">normocapnia</span></td><td>≥95%</td></tr>
+    <tr><td>CDH</td><td>7.25–7.40</td><td>&gt;50 preductal</td><td>45–65 <span class="badge ba">permissive</span></td><td>≥85% preductal</td></tr>
+    <tr><td>HIE (TH 33–34°C)</td><td>7.35–7.45</td><td>60–80</td><td>40–50 (koreksi suhu)</td><td>91–95%</td></tr></table>
+  </div>
+
+  <div class="sec">4. HFOV — Indikasi & Setting Awal</div>
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <h3>Indikasi HFOV</h3>
+        <ul>
+          <li>Gagal conventional (OI &gt;20–25)</li>
+          <li>Air leak syndrome (PIE, pneumotoraks persisten)</li>
+          <li>Hiperinflasi berat refrakter</li>
+          <li>MAS berat, PPHN refrakter</li>
+          <li>CDH pasca-repair (paru hipoplastik berat)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Setting Awal HFOV</h3>
+        <table><tr><th>Parameter</th><th>Nilai</th></tr>
+        <tr><td>MAP</td><td>2–3 cmH₂O &gt; MAP conventional</td></tr>
+        <tr><td>Frekuensi</td><td>10–15 Hz (preterm), 8–12 Hz (term)</td></tr>
+        <tr><td>Amplitudo (ΔP)</td><td>Hingga tampak "chest wiggle" bilateral</td></tr>
+        <tr><td>FiO₂</td><td>Mulai 1.0, titrasi turun</td></tr>
+        <tr><td>I:E ratio</td><td>1:2 (standar)</td></tr></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB: PEDIATRIK ============ -->
+<div id="tab-peds" class="hidden">
+
+  <!-- DROPDOWN TEORI PEDIATRIK -->
+  <div class="theory-dropdown" style="margin-bottom:12px">
+    <button class="theory-btn" onclick="toggleTheory('peds-patofis')">📖 Patofisiologi Gagal Napas Pediatrik & Perbedaan Anatomi vs Dewasa <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-peds-patofis">
+      <ul>
+        <li><strong>Anatomi:</strong> Oklusi parsial lebih berbahaya — resistensi ∝ 1/r⁴ (Hukum Poiseuille). Edema 1 mm pada bayi → 75% ↓ cross-sectional area vs 44% pada dewasa.</li>
+        <li><strong>Compliance:</strong> Compliance spesifik mirip dewasa, tapi chest wall lebih kompliants → paradoxal breathing saat WOB tinggi. Otot napas mudah fatigue → deteriorasi cepat.</li>
+        <li><strong>FRC rendah:</strong> Anak &lt;6 thn: kapasitas penutupan &gt; FRC saat tidur → atelektasis. PEEP penting untuk mempertahankan FRC.</li>
+        <li><strong>Konsumsi O₂ tinggi:</strong> 6–8 mL/kg/mnt (anak) vs 3–4 mL/kg/mnt (dewasa) → desaturasi lebih cepat saat apnea.</li>
+        <li><strong>Gagal napas tipe I (hipoksemia):</strong> V/Q mismatch, shunt (pneumonia, ARDS). Respon: ↑ FiO₂, PEEP.</li>
+        <li><strong>Gagal napas tipe II (hiperkapnia):</strong> Drive napas berkurang, obstruksi berat (asma), fatigue. Respon: ventilasi mekanik, bronkodilator.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="theory-dropdown" style="margin-bottom:12px">
+    <button class="theory-btn" onclick="toggleTheory('peds-pards')">📖 PARDS — Definisi Pediatric Berlin 2015 & Klasifikasi <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-peds-pards">
+      <table>
+        <tr><th>Derajat</th><th>OI (Oxygenation Index)</th><th>OSI (SpO₂-based)</th><th>PaO₂/FiO₂</th></tr>
+        <tr><td><span class="badge bb">Ringan</span></td><td>4 ≤ OI &lt; 8</td><td>5 ≤ OSI &lt; 7.5</td><td>200–300 (CPAP ≥5)</td></tr>
+        <tr><td><span class="badge ba">Sedang</span></td><td>8 ≤ OI &lt; 16</td><td>7.5 ≤ OSI &lt; 12.3</td><td>100–200</td></tr>
+        <tr><td><span class="badge br">Berat</span></td><td>OI ≥ 16</td><td>OSI ≥ 12.3</td><td>&lt;100</td></tr>
+      </table>
+      <p style="font-size:11px;color:var(--muted);margin-top:6px"><strong>OI = (MAP × FiO₂ × 100) / PaO₂</strong> · OSI = (MAP × FiO₂ × 100) / SpO₂ (jika tidak ada ABG)<br>Syarat PARDS: onset akut &lt;7 hari, edema paru bukan jantung/overload, perlukan CPAP ≥5 atau ventilasi invasif.</p>
+    </div>
+  </div>
+
+  <div class="theory-dropdown" style="margin-bottom:12px">
+    <button class="theory-btn" onclick="toggleTheory('peds-asma')">📖 Asma Berat — Patofisiologi Air Trapping & Manajemen Ventilasi <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-peds-asma">
+      <ul>
+        <li><strong>Mekanisme:</strong> Bronkospasme + edema mukosa + sekret → obstruksi ekspirasi → udara terjebak → dynamic hyperinflation → auto-PEEP → ↑ Pplat → risiko barotrauma.</li>
+        <li><strong>Strategi ventilasi:</strong> "Controlled hypoventilation" — RR rendah (10–14), I:E 1:4–1:5, VT 6–8 mL/kg. Terima permissive hypercapnia (PaCO₂ 45–65).</li>
+        <li><strong>Deteksi auto-PEEP:</strong> Ekspiratory hold — Paw tidak kembali ke 0 sebelum napas berikutnya. Atau: grafik flow tidak kembali baseline sebelum napas.</li>
+        <li><strong>PEEP eksternal:</strong> 0–5 cmH₂O. Hindari PEEP tinggi — sudah ada auto-PEEP internal.</li>
+        <li><strong>Adjuvant:</strong> Ketamin IV (bronkodilator + sedasi), Mg sulfat IV 25–50 mg/kg, helioks (He:O₂ 70:30) menurunkan turbulensi aliran, Aminofilin infus.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="theory-dropdown" style="margin-bottom:16px">
+    <button class="theory-btn" onclick="toggleTheory('peds-ibw')">📖 IBW (Ideal Body Weight) Pediatrik — Formula & Penggunaan <span class="chevron">▼</span></button>
+    <div class="theory-content" id="theory-peds-ibw">
+      <ul>
+        <li><strong>Mengapa IBW?</strong> VT berbasis actual body weight pada anak obese → overdistensi (paru tidak proporsional dengan BB). IBW mendekati berat untuk tinggi yang ideal.</li>
+        <li><strong>Formula McLaren &lt;1 thn:</strong> IBW = (usia bln × 0.5) + 4 kg (estimasi kasar).</li>
+        <li><strong>Formula Traub-Johnson ≥1 thn:</strong> IBW = 2.396 × e^(0.01863 × tinggi cm) — lebih akurat.</li>
+        <li><strong>Praktis:</strong> Gunakan grafik percentile WHO ke-50 untuk BB per tinggi. Pada anak obesitas &gt;120% IBW, hitung VT berbasis IBW bukan actual BB.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec">Setting Ventilator Pediatrik — Berdasar Kondisi Klinis</div>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Umumnya menggunakan mode Volume Control (VC-AC atau SIMV-VC) atau Pressure Control (PC-AC/SIMV-PC). VT target 6–8 mL/kg IBW.</p>
+
+  <div class="cc blue">
+    <div class="ct">ARDS Pediatrik (PARDS)</div>
+    <table><tr><th>Parameter</th><th>Mild</th><th>Moderate–Severe</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td colspan="2">VC-AC atau PC-AC</td><td>Lung-protective strategy</td></tr>
+    <tr><td>VT</td><td>6–8 mL/kg IBW</td><td>4–6 mL/kg IBW</td><td>IBW = ideal body weight</td></tr>
+    <tr><td>Plat Pressure</td><td>&lt;28 cmH₂O</td><td>&lt;28 cmH₂O</td><td>Batasi barotrauma</td></tr>
+    <tr><td>PEEP</td><td>5–8 cmH₂O</td><td>8–15 cmH₂O</td><td>Titrasi FiO₂/PEEP table</td></tr>
+    <tr><td>Rate (RR)</td><td>20–30 bpm</td><td>25–35 bpm</td><td>Sesuai usia; target pH &gt;7.25</td></tr>
+    <tr><td>FiO₂</td><td>≤0.40</td><td>0.40–1.0</td><td>Target SpO₂ 92–97%</td></tr>
+    <tr><td>PaCO₂</td><td>40–50</td><td>45–60 permissive</td><td>pH &gt;7.20 dapat diterima</td></tr></table>
+    <p style="font-size:11px;margin-top:8px;color:var(--muted)">📚 PEMVECC Guidelines 2017 · Intensive Care Med 43(12):1764</p>
+  </div>
+
+  <div class="cc amber">
+    <div class="ct">Status Asmatikus Berat</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>VC-AC</td><td>Control VT; hindari pressure control</td></tr>
+    <tr><td>VT</td><td>6–8 mL/kg</td><td>Monitor Pplat &lt;30 cmH₂O</td></tr>
+    <tr><td>Rate (RR)</td><td>10–14 bpm</td><td>SANGAT LAMBAT — beri waktu ekspirasi panjang</td></tr>
+    <tr><td>I:E ratio</td><td>1:4 atau 1:5</td><td>Ekspirasi panjang → cegah dynamic hyperinflation</td></tr>
+    <tr><td>PEEP</td><td>0–5 cmH₂O</td><td>PEEP rendah atau 0 — hindari auto-PEEP bertambah</td></tr>
+    <tr><td>FiO₂</td><td>1.0 awal</td><td>Titrasi ke SpO₂ 94–98%</td></tr>
+    <tr><td>PaCO₂</td><td>45–65 mmHg</td><td>Permissive hypercapnia</td></tr></table>
+    <div class="warn" style="margin-top:10px;margin-bottom:0"><strong>⚠ Auto-PEEP Asma</strong>Monitor grafik flow ventilator. Kurangi rate jika chest tidak kembali. Cek plateau pressure dengan inspiratory hold.</div>
+  </div>
+
+  <div class="cc teal">
+    <div class="ct">Pneumonia Berat / Sepsis-Associated Respiratory Failure</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>PC-AC atau VC-AC</td><td>Sinkronisasi baik</td></tr>
+    <tr><td>VT</td><td>6–8 mL/kg</td><td>Jika compliance rendah → turunkan ke 6</td></tr>
+    <tr><td>Rate (RR)</td><td>Sesuai usia</td><td>20–30 bpm untuk anak 1–12 thn</td></tr>
+    <tr><td>PEEP</td><td>5–8 cmH₂O</td><td>Naikkan jika FiO₂ &gt;0.6 untuk SpO₂ target</td></tr>
+    <tr><td>FiO₂</td><td>Titrasi</td><td>Target SpO₂ 92–97%</td></tr>
+    <tr><td>Antibiotik</td><td>Segera</td><td>Jangan tunda karena intubasi</td></tr></table>
+  </div>
+
+  <div class="cc purple">
+    <div class="ct">Post-Cardiac Arrest (ROSC) — Pediatrik</div>
+    <table><tr><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr>
+    <tr><td>Mode</td><td>VC-AC atau PC-AC</td><td>Stabilkan oksigenasi cepat</td></tr>
+    <tr><td>SpO₂</td><td>94–98%</td><td>Hindari hiperoksia (ROS injury) — titrasi FiO₂ ke &lt;0.40</td></tr>
+    <tr><td>PaCO₂</td><td>35–45 mmHg</td><td>Normocapnia — hindari hiperventilasi (↓CBF)</td></tr>
+    <tr><td>PEEP</td><td>5 cmH₂O</td><td>Standard</td></tr>
+    <tr><td>Suhu</td><td>36–37.5°C (TTM)</td><td>Targeted Temperature Management; hindari demam &gt;37.5°C</td></tr></table>
+  </div>
+
+  <div class="sec">Setting Awal Pediatrik Berdasar Usia (Quick Reference)</div>
+  <div class="card">
+    <table>
+      <tr><th>Usia/BB</th><th>RR set (bpm)</th><th>VT (mL/kg)</th><th>PEEP</th><th>Tins</th><th>ETT ID (cuffed)</th><th>Kedalaman ETT (oral)</th></tr>
+      <tr><td>Bayi 0–6 bln (~4–7 kg)</td><td>30–40</td><td>6–8</td><td>4–5</td><td>0.4–0.5 det</td><td>3.0–3.5 mm</td><td>BB+6 cm</td></tr>
+      <tr><td>Bayi 6–12 bln (~7–10 kg)</td><td>25–35</td><td>6–8</td><td>4–5</td><td>0.4–0.5 det</td><td>3.5 mm</td><td>12–13 cm</td></tr>
+      <tr><td>Anak 1–2 thn (~10–12 kg)</td><td>25–30</td><td>6–8</td><td>4–5</td><td>0.5–0.7 det</td><td>3.5–4.0 mm</td><td>13–14 cm</td></tr>
+      <tr><td>Anak 2–5 thn (~12–18 kg)</td><td>20–25</td><td>6–8</td><td>5</td><td>0.6–0.8 det</td><td>4.0–5.0 mm</td><td>14–16 cm</td></tr>
+      <tr><td>Anak 5–8 thn (~18–25 kg)</td><td>18–22</td><td>6–8</td><td>5</td><td>0.8–1.0 det</td><td>5.0–5.5 mm</td><td>16–18 cm</td></tr>
+      <tr><td>Anak 8–12 thn (~25–40 kg)</td><td>15–18</td><td>6–8</td><td>5</td><td>1.0–1.2 det</td><td>5.5–6.5 mm</td><td>18–20 cm</td></tr>
+      <tr><td>Remaja &gt;12 thn (&gt;40 kg)</td><td>12–15</td><td>6–8</td><td>5</td><td>1.0–1.5 det</td><td>6.5–7.5 mm</td><td>20–22 cm</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============ TAB: MONITORING ============ -->
+<div id="tab-monitor" class="hidden">
+  <div class="sec">Monitoring Pre-Intubasi</div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Checklist Pre-Intubasi</h3>
+      <div class="step"><div class="snum">1</div><div><div class="stitle">Stabilisasi Awal</div><div class="sdesc">Suhu, glukosa, akses IV. Preoksigenasi CPAP / O₂ bebas</div></div></div>
+      <div class="step"><div class="snum">2</div><div><div class="stitle">Ukuran ETT & Kedalaman</div><div class="sdesc">Gunakan kalkulator di tab Kalkulator. Siapkan 1 size atas dan bawah</div></div></div>
+      <div class="step"><div class="snum">3</div><div><div class="stitle">Setting Bellavista</div><div class="sdesc">Pilih mode pasien (neonatal/pediatric) → masukkan BB → kalibrasi flow sensor baru</div></div></div>
+      <div class="step"><div class="snum">4</div><div><div class="stitle">Premedikasi</div><div class="sdesc">Gunakan kalkulator dosis. Siapkan antidot (nalokson, sugammadex)</div></div></div>
+      <div class="step"><div class="snum">5</div><div><div class="stitle">Konfirmasi ETT</div><div class="sdesc">Auskultasi bilateral, capnografi warna/kuantitatif, CXR segera</div></div></div>
+    </div>
+    <div class="card">
+      <h3>Monitoring Intraventilasi (Rutin)</h3>
+      <ul>
+        <li><strong>SpO₂ kontinu</strong> — preductal (RH tangan kanan pada neonatus)</li>
+        <li><strong>TcCO₂ / ETCO₂</strong> jika tersedia</li>
+        <li><strong>VT delivered</strong> di display Bellavista — 4–8 mL/kg</li>
+        <li><strong>MAP</strong> (Mean Airway Pressure) — kalkulasi otomatis display</li>
+        <li><strong>Waveform paru</strong> — P-V loop &amp; flow-volume loop (Bellavista)</li>
+        <li><strong>ABG</strong> — 30–60 mnt setelah inisiasi, lalu tiap 4–8 jam</li>
+        <li><strong>CXR</strong> — segera post-intubasi, lalu sesuai indikasi</li>
+        <li><strong>Hemodinamik</strong> — HR, TD, perfusi; echo bila PPHN</li>
+      </ul>
+      <div class="info" style="margin-top:10px">
+        <strong>Akronim DOPE</strong> — kondisi bayi tiba-tiba memburuk:<br>
+        <strong>D</strong>isplacement · <strong>O</strong>bstruksi · <strong>P</strong>neumotoraks · <strong>E</strong>quipment failure
+      </div>
+    </div>
+  </div>
+
+  <!-- ABG INTERPRETER -->
+  <div class="sec">Interpretasi ABG — Pre &amp; Post Intubasi</div>
+  <div class="calc-box">
+    <div class="calc-title"><span>🩸</span> Kalkulator Interpretasi Analisis Gas Darah (AGD/ABG)</div>
+    <div class="info" style="margin-bottom:12px">Masukkan nilai AGD untuk mendapatkan interpretasi sistematis: asam-basa, oksigenasi, ventilasi, dan saran tindak lanjut ventilator.</div>
+
+    <div class="grid2" style="gap:10px;margin-bottom:12px">
+      <div>
+        <div class="subsec">Parameter Dasar</div>
+        <div class="input-row"><label>pH</label><input type="number" id="abgPH" step="0.01" min="6.5" max="8.0" placeholder="7.35–7.45"></div>
+        <div class="input-row"><label>PaCO₂ (mmHg)</label><input type="number" id="abgCO2" step="1" min="10" max="120" placeholder="35–45"></div>
+        <div class="input-row"><label>PaO₂ (mmHg)</label><input type="number" id="abgO2" step="1" min="10" max="600" placeholder="80–100"></div>
+        <div class="input-row"><label>HCO₃⁻ (mEq/L)</label><input type="number" id="abgHCO3" step="0.1" min="5" max="50" placeholder="22–26"></div>
+      </div>
+      <div>
+        <div class="subsec">Parameter Tambahan</div>
+        <div class="input-row"><label>BE (mEq/L)</label><input type="number" id="abgBE" step="0.1" min="-30" max="30" placeholder="-2 s/d +2"></div>
+        <div class="input-row"><label>SpO₂ (%)</label><input type="number" id="abgSpO2" step="1" min="50" max="100" placeholder="94–99"></div>
+        <div class="input-row"><label>FiO₂ (0.21–1.0)</label><input type="number" id="abgFiO2" step="0.01" min="0.21" max="1.0" placeholder="0.21–1.0"></div>
+        <div class="input-row"><label>MAP cmH₂O</label><input type="number" id="abgMAP" step="0.1" min="0" max="40" placeholder="opsional"></div>
+        <div class="input-row"><label>Jenis pasien</label>
+          <select id="abgPatient">
+            <option value="neo_preterm">Neonatus preterm</option>
+            <option value="neo_term">Neonatus term</option>
+            <option value="peds">Pediatrik</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcABG()">Interpretasi AGD</button>
+
+    <div id="abg-results" class="hidden" style="margin-top:16px">
+      <div id="abg-result-content"></div>
+    </div>
+  </div>
+
+  <div class="sec">Komplikasi & Troubleshooting Cepat</div>
+  <div class="grid3">
+    <div class="cc red">
+      <div class="ct">Pneumotoraks</div>
+      <p><strong>Tanda:</strong> SpO₂ drop mendadak, gerak dada asimetris, suara napas hilang unilateral</p>
+      <p style="margin-top:6px"><strong>Aksi:</strong> Transilluminasi dada → CXR → jarum dekompresi sela iga 2 MCL → WSD</p>
+      <p style="margin-top:6px"><strong>Setting:</strong> ↓ Pins, ↓ PEEP, ↓ Tins</p>
+    </div>
+    <div class="cc amber">
+      <div class="ct">Volutrauma / BPD</div>
+      <p><strong>Risiko:</strong> VT &gt;6 mL/kg, FiO₂ tinggi lama, PIP tinggi</p>
+      <p style="margin-top:6px"><strong>Aksi:</strong> Aktifkan TargetVent; target VT 4–5; weaning FiO₂ agresif</p>
+      <p style="margin-top:6px"><strong>Monitor:</strong> P-V loop di Bellavista</p>
+    </div>
+    <div class="cc purple">
+      <div class="ct">IVH / PVL</div>
+      <p><strong>Pemicu:</strong> Hipokarbia (PaCO₂ &lt;35) → vasokonstriksi serebral</p>
+      <p style="margin-top:6px"><strong>Aksi:</strong> Permissive hypercapnia preterm; hindari fluktuasi CO₂ mendadak</p>
+      <p style="margin-top:6px"><strong>Target PaCO₂:</strong> 45–55 mmHg pada preterm</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB: WEANING ============ -->
+<div id="tab-wean" class="hidden">
+
+  <!-- RSBI CALCULATOR -->
+  <div class="calc-box">
+    <div class="calc-title"><span>📏</span> Kalkulator RSBI & pRSBI — Readiness to Wean</div>
+    <div class="info" style="margin-bottom:12px">
+      <strong>RSBI (Rapid Shallow Breathing Index)</strong> = RR spontan / VT (L). Indeks prediksi weaning sukses. <strong>pRSBI</strong> = RSBI/BB digunakan untuk neonatus &amp; bayi.
+    </div>
+
+    <div class="grid2" style="gap:10px">
+      <div>
+        <div class="input-row"><label>RR Spontan (/mnt)</label><input type="number" id="rsbRR" step="1" min="5" max="200" placeholder="cth: 40"></div>
+        <div class="input-row"><label>VT Spontan (mL)</label><input type="number" id="rsbVT" step="1" min="1" max="1000" placeholder="cth: 25"></div>
+        <div class="input-row"><label>BB (kg)</label><input type="number" id="rsbBB" step="0.1" min="0.3" max="100" placeholder="cth: 2.5"></div>
+      </div>
+      <div>
+        <div class="input-row"><label>Jenis pasien</label>
+          <select id="rsbPatient">
+            <option value="neo">Neonatus / Bayi (&lt;1 thn)</option>
+            <option value="peds">Pediatrik (1–17 thn)</option>
+          </select>
+        </div>
+        <div class="input-row"><label>MIP/NIF (cmH₂O)</label><input type="number" id="rsbMIP" step="1" min="-100" max="0" placeholder="misal: -30 (opsional)"></div>
+        <div class="input-row"><label>PEEP saat ini</label><input type="number" id="rsbPEEP" step="1" min="0" max="20" placeholder="cth: 5"></div>
+      </div>
+    </div>
+    <button class="calc-btn" style="margin-top:8px" onclick="calcRSBI()">Hitung RSBI & Evaluasi Weaning</button>
+
+    <div id="rsbi-results" class="hidden" style="margin-top:14px">
+      <div id="rsbi-result-content"></div>
+    </div>
+
+    <!-- Teori RSBI -->
+    <div class="theory-dropdown" style="margin-top:14px">
+      <button class="theory-btn" onclick="toggleTheory('rsbi-theory')">📖 Teori RSBI & pRSBI — Interpretasi & Batasan Klinis <span class="chevron">▼</span></button>
+      <div class="theory-content" id="theory-rsbi-theory">
+        <div class="subsec">RSBI (Dewasa & Pediatrik ≥1 thn)</div>
+        <table>
+          <tr><th>Nilai RSBI</th><th>Interpretasi</th><th>Rekomendasi</th></tr>
+          <tr><td>&lt; 80 breaths/mnt/L</td><td><span class="badge bg">Baik</span></td><td>Pertimbangkan ekstubasi jika kriteria lain terpenuhi</td></tr>
+          <tr><td>80–105 breaths/mnt/L</td><td><span class="badge ba">Borderline</span></td><td>SBT lebih lama, evaluasi penyebab; pertimbangkan tunda</td></tr>
+          <tr><td>&gt; 105 breaths/mnt/L</td><td><span class="badge br">Buruk</span></td><td>Weaning kemungkinan gagal; optimalkan kondisi dulu</td></tr>
+        </table>
+        <div class="subsec">pRSBI (Neonatus & Bayi &lt;1 thn)</div>
+        <table>
+          <tr><th>Nilai pRSBI</th><th>Interpretasi</th><th>Rekomendasi</th></tr>
+          <tr><td>&lt; 8–9 breaths/mnt/mL/kg</td><td><span class="badge bg">Siap ekstubasi</span></td><td>Sensitivity ~80%, spesifisitas ~85% prediksi sukses</td></tr>
+          <tr><td>9–11 breaths/mnt/mL/kg</td><td><span class="badge ba">Borderline</span></td><td>SBT lanjutkan, observasi ketat</td></tr>
+          <tr><td>&gt; 11 breaths/mnt/mL/kg</td><td><span class="badge br">Risiko gagal</span></td><td>Tunda ekstubasi; identifikasi penyebab</td></tr>
+        </table>
+        <ul style="margin-top:8px">
+          <li><strong>Formula:</strong> RSBI = RR (bpm) / VT (L) · pRSBI = RR / (VT mL/kg) = RSBI / BB</li>
+          <li><strong>Kapan diukur:</strong> Saat SBT — minimal support (PEEP 5, PS 5–8 atau CPAP T-piece 3–5 mnt). Bukan pada support penuh.</li>
+          <li><strong>Batasan:</strong> RSBI bukan satu-satunya kriteria. Tetap nilai: pH, hemodinamik, kesadaran, sekret, stridor.</li>
+          <li><strong>Pediatrik:</strong> VT perlu dikoreksi per kg (pRSBI) karena pasien kecil punya RR tinggi + VT kecil secara absolut (RSBI biasa akan selalu tinggi).</li>
+        </ul>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">Sumber: Yang KL, Tobin MJ. NEJM 1991; Principi T, Pediatr Crit Care Med 2011; Khan N, Pediatr Pulmonol 2019.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">Kriteria Siap Weaning & Langkah Ekstubasi</div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Kriteria Siap Weaning</h3>
+      <ul>
+        <li>Penyakit primer membaik / terkontrol</li>
+        <li>FiO₂ ≤ 0.30–0.35 dengan SpO₂ stabil</li>
+        <li>Pins dapat diturunkan &lt;16 cmH₂O</li>
+        <li>PEEP ≤ 5 cmH₂O</li>
+        <li>Napas spontan cukup (bayi aktif, tidak apnea)</li>
+        <li>pH &gt;7.25, PaCO₂ &lt;55 mmHg</li>
+        <li>Hemodinamik stabil</li>
+        <li>Kafein sudah diberikan (preterm)</li>
+        <li>Sedasi/analgesik sudah dikurangi</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Langkah Weaning Bertahap (Bellavista)</h3>
+      <div class="step"><div class="snum">1</div><div><div class="stitle">Turunkan FiO₂</div><div class="sdesc">↓2–5% tiap 30–60 mnt. Prioritaskan ini sebelum parameter lain</div></div></div>
+      <div class="step"><div class="snum">2</div><div><div class="stitle">Turunkan Pins (PIP)</div><div class="sdesc">↓1–2 cmH₂O bertahap; monitor VT delivered. Target &lt;16</div></div></div>
+      <div class="step"><div class="snum">3</div><div><div class="stitle">Turunkan Rate</div><div class="sdesc">↓5–10 bpm; monitor napas spontan. Target RR 15–25 sebelum ekstubasi</div></div></div>
+      <div class="step"><div class="snum">4</div><div><div class="stitle">Transisi ke PSV</div><div class="sdesc">Turunkan Rate mandatory → naikkan Psupport → napas spontan dominan</div></div></div>
+      <div class="step"><div class="snum">5</div><div><div class="stitle">SBT (Spontaneous Breathing Trial)</div><div class="sdesc">3–5 mnt ET-CPAP atau PSV rendah. Hitung RSBI/pRSBI. Gagal: bradikardi, desaturasi, apnea berulang</div></div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:12px">
+    <h3>Kriteria Ekstubasi — Threshold Bellavista</h3>
+    <table>
+      <tr><th>Parameter</th><th>Threshold</th></tr>
+      <tr><td>FiO₂</td><td>≤ 0.30–0.35</td></tr>
+      <tr><td>Pins (PIP)</td><td>≤ 14–16 cmH₂O</td></tr>
+      <tr><td>PEEP</td><td>≤ 5 cmH₂O</td></tr>
+      <tr><td>Rate</td><td>≤ 20–25 bpm (napas spontan dominan)</td></tr>
+      <tr><td>VT delivered (TargetVent)</td><td>≥ 4 mL/kg konsisten</td></tr>
+      <tr><td>ABG</td><td>pH &gt;7.25, PaCO₂ &lt;55, PaO₂ adekuat</td></tr>
+      <tr><td>Kafein</td><td>Sudah diberikan (terutama preterm)</td></tr>
+      <tr><td>RSBI/pRSBI</td><td>RSBI &lt;80 (peds), pRSBI &lt;8–9 (neo/bayi)</td></tr>
+    </table>
+    <div class="warn" style="margin-top:10px;margin-bottom:0">
+      <strong>⚠ Reintubasi — Pertimbangkan Jika:</strong>
+      Apnea &gt;6× butuh stimulasi / &gt;2× butuh PPV · SpO₂ &lt;85% persisten · pH &lt;7.20 · Takipnea berat + retraksi signifikan
+    </div>
+  </div>
+
+  <div class="sec">Support Pasca Ekstubasi</div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Pilihan Modalitas NIV Post-Ekstubasi</h3>
+      <table>
+        <tr><th>Modalitas</th><th>Indikasi</th></tr>
+        <tr><td><span class="badge bt">NIPPV</span></td><td>Preterm; lebih efektif dari CPAP cegah reintubasi</td></tr>
+        <tr><td><span class="badge bb">nCPAP</span></td><td>Standar; CPAP 5–7 cmH₂O</td></tr>
+        <tr><td><span class="badge bg">HHHFNC</span></td><td>Alternatif; kenyamanan lebih baik</td></tr>
+        <tr><td><span class="badge ba">NC/RA</span></td><td>Term, kondisi ringan, napas spontan kuat</td></tr>
+      </table>
+      <div class="info" style="margin-top:10px">
+        <strong>Evidence:</strong> Kafein pra-ekstubasi mengurangi kegagalan 48% (RR 0.48, NNT 4). NIPPV via ventilator superior dari bilevel device.
+      </div>
+    </div>
+    <div class="card">
+      <h3>Monitoring 24–48 Jam Post-Ekstubasi</h3>
+      <ul>
+        <li>SpO₂ kontinu — deteksi intermittent hypoxia (SpO₂ &lt;80%)</li>
+        <li>Monitor RR, retraksi, takipnea</li>
+        <li>ABG/kapiler 2–4 jam post-ekstubasi</li>
+        <li>Toleransi enteral — cegah distensi abdomen</li>
+        <li>Kafein: lanjutkan hingga 34–36 mgg PCA</li>
+        <li>Steroid sistemik: pertimbangkan jika stridor post-ekstubasi</li>
+        <li>CXR 4–6 jam bila ada kecurigaan komplikasi</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB: REFERENSI ============ -->
+<div id="tab-ref" class="hidden">
+  <div class="sec">Referensi Internasional (Open Access)</div>
+  <div class="card">
+    <div class="ri"><div class="rt">Invasive Ventilation Strategies in Neonates</div><div class="rm">Indian Pediatrics · 2025 · PMC12310796</div><div class="rd">Setting per kondisi (PPHN, CDH, MAS, RDS, BPD). <a class="rl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12310796/" target="_blank">→ PMC (gratis)</a></div></div>
+    <div class="ri"><div class="rt">European Consensus Guidelines on RDS 2022</div><div class="rm">Neonatology · 2023 · PMC10064400</div><div class="rd">Guideline utama RDS: surfaktan, ventilasi, CPAP, kafein. <a class="rl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10064400/" target="_blank">→ PMC (gratis)</a></div></div>
+    <div class="ri"><div class="rt">Weaning and Extubation from Neonatal MV — Evidence-Based Review</div><div class="rm">BMC Pulmonary Medicine · 2022 · PMC9670452</div><div class="rd">Weaning, SBT, kafein, kriteria ekstubasi. <a class="rl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9670452/" target="_blank">→ PMC (gratis)</a></div></div>
+    <div class="ri"><div class="rt">Noninvasive Ventilation Strategies in Neonates</div><div class="rm">PMC12106148 · 2025</div><div class="rd">NCPAP, NIPPV, HHHFNC, post-ekstubasi. <a class="rl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12106148/" target="_blank">→ PMC (gratis)</a></div></div>
+    <div class="ri"><div class="rt">Premedication for Endotracheal Intubation in the Newborn — CPS Position Statement</div><div class="rm">Paediatr Child Health · PMC3077307</div><div class="rd">Protokol optimal: atropin + fentanil + suksinilkolin. <a class="rl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3077307/" target="_blank">→ PMC (gratis)</a></div></div>
+    <div class="ri"><div class="rt">PEMVECC: Recommendations for Mechanical Ventilation of Critically Ill Children</div><div class="rm">Intensive Care Med · 2017 · 43(12):1764</div><div class="rd">Konsensus ventilasi pediatrik kritis. <a class="rl" href="https://doi.org/10.1007/s00134-017-4920-z" target="_blank">→ Springer</a></div></div>
+    <div class="ri"><div class="rt">Choice of ETT Size in Pediatric Patients</div><div class="rm">Anesth Pain Med Seoul · 2022 · PMC9663958</div><div class="rd">Formula Cole, Khine, Duracher untuk ETT cuffed/uncuffed. <a class="rl" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9663958/" target="_blank">→ PMC (gratis)</a></div></div>
+    <div class="ri"><div class="rt">RSBI as a Predictor of Extubation Outcome in Pediatric ICU</div><div class="rm">Pediatr Crit Care Med · 2011 · Principi T</div><div class="rd">pRSBI threshold pada bayi dan anak. Sensitivity/specificity analysis.</div></div>
+    <div class="ri"><div class="rt">Goldsmith's Assisted Ventilation of the Neonate, 7th Ed.</div><div class="rm">Keszler &amp; Gautham · Elsevier · 2022</div><div class="rd">Textbook standar global ventilasi neonatus.</div></div>
+    <div class="ri"><div class="rt">Bellavista 1000/1000e/Neo — User Manual (PDF resmi)</div><div class="rm">IMT Medical · 2019</div><div class="rd"><a class="rl" href="https://www.rtso.ca/wp-content/uploads/2020/03/bellavista-Manual-G6-1000-1000e-Neo-EN-2019-10.pdf" target="_blank">→ Download PDF gratis</a></div></div>
+  </div>
+  <div class="sec">Referensi Lokal (Bahasa Indonesia)</div>
+  <div class="card">
+    <div class="ri"><div class="rt">Panduan Provider Resusitasi Neonatus — ResNeo ID Edisi 1</div><div class="rm">IDAI · 2024</div><div class="rd"><a class="rl" href="https://www.idai.or.id/publications/buku-idai/buku-panduan-provider-resusitasi-neonatus-resneo-id-edisi-pertama" target="_blank">→ IDAI.or.id</a></div></div>
+    <div class="ri"><div class="rt">Buku Saku Ventilator Pediatrik</div><div class="rm">IDAI</div><div class="rd"><a class="rl" href="https://www.idai.or.id/publications/buku-idai/buku-saku-ventilator-pediatrik" target="_blank">→ IDAI.or.id</a></div></div>
+    <div class="ri"><div class="rt">Jurnal Sari Pediatri — Open Access</div><div class="rm">IDAI</div><div class="rd"><a class="rl" href="https://saripediatri.org" target="_blank">→ saripediatri.org (PDF gratis)</a></div></div>
+  </div>
+</div>
+
+<div class="print-note">
+  Cheatsheet ini disusun untuk referensi klinis GP di NICU/PICU/ICU. Tidak menggantikan keputusan klinis SpA/neonatologis.<br>
+  Dosis obat: selalu verifikasi sebelum pemberian. Formula ETT: siapkan 1 size di atas dan bawah. Versi 3 · Mei 2026.
+</div>
+
+<script>
+// ===== TAB SYSTEM =====
+function showTab(id){
+  ['calc','neo','peds','monitor','wean','ref'].forEach(t=>{
+    document.getElementById('tab-'+t).classList.toggle('hidden',t!==id);
+  });
+  document.querySelectorAll('#mainTabs .tab-btn').forEach((b,i)=>{
+    const ids=['calc','neo','peds','monitor','wean','ref'];
+    b.classList.toggle('active',ids[i]===id);
+  });
+}
+
+// ===== CALC SUB-TAB SYSTEM =====
+function showCalcSub(id){
+  ['ett','drug','rr'].forEach(t=>{
+    document.getElementById('calcsub-'+t).classList.toggle('hidden',t!==id);
+  });
+  document.querySelectorAll('#calcSubTabs .subtab-btn').forEach((b,i)=>{
+    const ids=['ett','drug','rr'];
+    b.classList.toggle('active',ids[i]===id);
+  });
+}
+
+// ===== THEORY DROPDOWN TOGGLE =====
+function toggleTheory(id){
+  const content=document.getElementById('theory-'+id);
+  const btn=content.previousElementSibling;
+  const isVisible=content.classList.contains('visible');
+  content.classList.toggle('visible',!isVisible);
+  btn.classList.toggle('open',!isVisible);
+}
+
+// ===== ETT CALCULATOR =====
+function updateEttForm(){
+  const v=document.getElementById('ettPatient').value;
+  document.getElementById('ett-neo-row').classList.toggle('hidden',v==='peds');
+  document.getElementById('ett-peds-row').classList.toggle('hidden',v==='neo');
+  document.getElementById('ett-results').classList.add('hidden');
+}
+
+function calcETT(){
+  const type=document.getElementById('ettPatient').value;
+  let results=[],formulaNote='';
+
+  if(type==='neo'){
+    const bb=parseFloat(document.getElementById('ettBB').value);
+    if(!bb||bb<0.3||bb>5){alert('Masukkan berat badan neonatus (0.3–5 kg)');return;}
+    let uncuffed,cuffed,depth;
+    if(bb<=1.0){uncuffed=2.5;cuffed=null;}
+    else if(bb<=2.0){uncuffed=3.0;cuffed=null;}
+    else if(bb<=3.0){uncuffed=3.0;cuffed=3.0;}
+    else{uncuffed=3.5;cuffed=3.5;}
+    depth=bb+6;
+    results=[
+      {label:'ETT Uncuffed (ID)',value:uncuffed+' mm',sub:'Rekomendasi utama neonatus'},
+      {label:'ETT Cuffed (ID)',value:cuffed?cuffed+' mm':'Tidak disarankan',sub:cuffed?'Jika tersedia & terlatih':'<1 kg: hindari cuffed'},
+      {label:'Kedalaman (oral)',value:depth.toFixed(1)+' cm',sub:'Formula: BB(kg) + 6 cm'},
+      {label:'Siapkan juga',value:(uncuffed-0.5)+' & '+(uncuffed+0.5)+' mm',sub:'1 size atas & bawah'},
+    ];
+    formulaNote='<strong>Formula neonatus (BB-based):</strong> &lt;1 kg → 2.5mm; 1–2 kg → 3.0mm; 2–3 kg → 3.0–3.5mm; &gt;3 kg → 3.5mm (uncuffed). Kedalaman oral = BB(kg) + 6 cm. Sumber: Goldsmith\'s 7th Ed; European Consensus Guidelines 2022.';
+  } else {
+    const age=parseFloat(document.getElementById('ettAge').value);
+    if(age===null||isNaN(age)||age<0||age>16){alert('Masukkan usia 0–16 tahun');return;}
+    let cuffed,uncuffed,depth;
+    if(age<0.5){cuffed=3.0;uncuffed=3.5;}
+    else if(age<1){cuffed=3.5;uncuffed=4.0;}
+    else{
+      uncuffed=Math.round(((age/4)+4)*2)/2;
+      cuffed=Math.round(((age/4)+3.5)*2)/2;
+    }
+    depth=Math.round((age/2+12)*10)/10;
+    results=[
+      {label:'ETT Cuffed (ID)',value:cuffed+' mm',sub:'Formula Duracher: (usia/4)+3.5'},
+      {label:'ETT Uncuffed (ID)',value:uncuffed+' mm',sub:'Formula Cole: (usia/4)+4'},
+      {label:'Kedalaman (oral)',value:depth+' cm',sub:'Formula: (usia/2)+12 cm'},
+      {label:'Siapkan juga',value:(cuffed-0.5)+' & '+(cuffed+0.5)+' mm',sub:'1 size atas & bawah'},
+    ];
+    formulaNote='<strong>Formula pediatrik (age-based):</strong> Cuffed: (usia/4)+3.5 — Duracher. Uncuffed: (usia/4)+4 — Cole. Kedalaman oral = (usia/2)+12. Sumber: PMC9663958.';
+  }
+  const grid=document.getElementById('ett-result-grid');
+  grid.innerHTML=results.map(r=>`<div class="result-card"><div class="result-label">${r.label}</div><div class="result-value">${r.value}</div><div class="result-sub">${r.sub}</div></div>`).join('');
+  document.getElementById('ett-formula-note').innerHTML=formulaNote;
+  document.getElementById('ett-results').classList.remove('hidden');
+}
+
+// ===== DRUG CALCULATOR =====
+function updateDrugForm(){
+  const v=document.getElementById('drugPatient').value;
+  document.getElementById('drug-ga-row').classList.toggle('hidden',v==='peds');
+  document.getElementById('drug-age-row').classList.toggle('hidden',v==='neo');
+}
+
+function calcDrugs(){
+  const type=document.getElementById('drugPatient').value;
+  const bb=parseFloat(document.getElementById('drugBB').value);
+  if(!bb||bb<0.3){alert('Masukkan berat badan yang valid');return;}
+  const category=document.getElementById('drugCategory').value;
+
+  let drugs=[];
+  let ctx='';
+  let showSP=false;
+  let spDrugs=[];
+
+  if(type==='neo'){
+    const ga=document.getElementById('drugGA').value;
+    const isPreterm=ga==='preterm';
+
+    if(category==='rsi'){
+      ctx=`Neonatus ${isPreterm?'preterm':'term'} · BB ${bb} kg · Protokol RSI/Premedikasi (AAP/CPS)`;
+      // Fentanil
+      drugs.push({name:'Fentanil',role:'Analgesik (lini 1 per AAP)',doseStr:'1–4 mcg/kg',totalStr:`${(bb*1).toFixed(1)}–${(bb*4).toFixed(1)} mcg`,conc:'50 mcg/mL',volStr:`${(bb*1/50).toFixed(2)}–${(bb*4/50).toFixed(2)} mL`,note:'Infus lambat 2–5 mnt. Waspada chest rigidity.',color:'bb'});
+      // Atropin
+      const atr=Math.max(bb*0.02,0.1);
+      drugs.push({name:'Atropin',role:'Vagolitik',doseStr:'20 mcg/kg (min 0.1 mg)',totalStr:`${atr.toFixed(3)} mg`,conc:'0.25 mg/mL',volStr:`${(atr/0.25).toFixed(2)} mL`,note:'Berikan 1–2 mnt sebelum laringoskopi.',color:'bt'});
+      // Midazolam / keterangan preterm
+      if(!isPreterm){
+        drugs.push({name:'Midazolam',role:'Sedasi (hanya PCA ≥37 mgg)',doseStr:'0.05–0.1 mg/kg',totalStr:`${(bb*0.05).toFixed(3)}–${(bb*0.1).toFixed(3)} mg`,conc:'1 mg/mL',volStr:`${(bb*0.05).toFixed(2)}–${(bb*0.1).toFixed(2)} mL`,note:'Onset 3–5 mnt. Tidak untuk preterm.',color:'ba'});
+      } else {
+        drugs.push({name:'Midazolam',role:'Sedasi',doseStr:'HINDARI pada preterm',totalStr:'—',conc:'—',volStr:'—',note:'Depresi napas berkepanjangan pada preterm.',color:'br'});
+      }
+      // Rokuronium
+      drugs.push({name:'Rokuronium',role:'Paralitik (pilihan 1 NICU)',doseStr:'0.6–1.2 mg/kg IV',totalStr:`${(bb*0.6).toFixed(2)}–${(bb*1.2).toFixed(2)} mg`,conc:'10 mg/mL',volStr:`${(bb*0.6/10).toFixed(2)}–${(bb*1.2/10).toFixed(2)} mL`,note:'Siapkan sugammadex reversal. Durasi ~30–60 mnt.',color:'bg'});
+      // Suksinilkolin
+      drugs.push({name:'Suksinilkolin',role:'Paralitik (short-acting alt.)',doseStr:'2 mg/kg IV',totalStr:`${(bb*2).toFixed(2)} mg`,conc:'20 mg/mL',volStr:`${(bb*2/20).toFixed(2)} mL`,note:'KI: miopati, hiperkalemia, luka bakar >6 jam.',color:'bg'});
+      // Atrakurium
+      drugs.push({name:'Atrakurium',role:'Paralitik (alt. gagal ginjal/hati)',doseStr:'0.3–0.6 mg/kg IV',totalStr:`${(bb*0.3).toFixed(2)}–${(bb*0.6).toFixed(2)} mg`,conc:'10 mg/mL',volStr:`${(bb*0.3/10).toFixed(2)}–${(bb*0.6/10).toFixed(2)} mL`,note:'Tidak memerlukan reversal sugammadex. Metabolisme Hofmann — aman gagal organ.',color:'bg'});
+      // Morfin
+      drugs.push({name:'Morfin',role:'Analgesik alt. (jika fentanil tdk ada)',doseStr:'0.05–0.1 mg/kg',totalStr:`${(bb*0.05).toFixed(3)}–${(bb*0.1).toFixed(3)} mg`,conc:'1 mg/mL',volStr:`${(bb*0.05).toFixed(2)}–${(bb*0.1).toFixed(2)} mL`,note:'Onset lebih lambat. Siapkan nalokson.',color:'ba'});
+
+    } else if(category==='cont'){
+      ctx=`Neonatus ${isPreterm?'preterm':'term'} · BB ${bb} kg · Obat Kontinyu / Infus (Syringe Pump)`;
+      showSP=true;
+      // Morfin infus
+      const morphRate_low=bb*0.01, morphRate_high=bb*0.02; // mg/kg/jam
+      drugs.push({name:'Morfin',role:'Analgesik kontinyu (NICU lini 1)',doseStr:'10–20 mcg/kg/jam',totalStr:`${(morphRate_low*1000).toFixed(0)}–${(morphRate_high*1000).toFixed(0)} mcg/jam`,conc:'0.1–0.5 mg/mL (larutkan)',volStr:'Lihat tabel SP',note:'Loading: 50–100 mcg/kg bolus lambat. Titrasi per respon & efek samping.',color:'bb'});
+      spDrugs.push({name:'Morfin',unit:'mcg/kg/jam',factor:1000,typical_low:10,typical_high:20,concDefault:0.1,concUnit:'mg/mL',convert:0.001});
+      // Fentanil infus
+      drugs.push({name:'Fentanil',role:'Analgesik kontinyu (alt. morfin)',doseStr:'0.5–2 mcg/kg/jam',totalStr:`${(bb*0.5).toFixed(2)}–${(bb*2).toFixed(2)} mcg/jam`,conc:'5–10 mcg/mL (larutkan)',volStr:'Lihat tabel SP',note:'Lebih cepat onset. Adsorpsi ke PVC.',color:'bb'});
+      spDrugs.push({name:'Fentanil',unit:'mcg/kg/jam',factor:1,typical_low:0.5,typical_high:2,concDefault:5,concUnit:'mcg/mL',convert:1});
+      // Midazolam infus (term)
+      if(!isPreterm){
+        drugs.push({name:'Midazolam',role:'Sedasi kontinyu (term ≥37 mgg)',doseStr:'0.01–0.06 mg/kg/jam',totalStr:`${(bb*0.01).toFixed(3)}–${(bb*0.06).toFixed(3)} mg/jam`,conc:'0.1–0.5 mg/mL',volStr:'Lihat tabel SP',note:'Mulai rendah, titrasi naik. Hindari preterm.',color:'ba'});
+        spDrugs.push({name:'Midazolam',unit:'mcg/kg/jam',factor:1000,typical_low:10,typical_high:60,concDefault:0.1,concUnit:'mg/mL',convert:0.001});
+      }
+      // Atrakurium infus
+      drugs.push({name:'Atrakurium',role:'Paralitik kontinyu (gagal organ)',doseStr:'5–10 mcg/kg/mnt',totalStr:`${(bb*5).toFixed(0)}–${(bb*10).toFixed(0)} mcg/mnt`,conc:'0.5–1 mg/mL',volStr:'Lihat tabel SP',note:'Loading 0.3–0.5 mg/kg bolus. Tidak perlu reversal. Encerkan dg NS (bukan RL).',color:'bg'});
+      spDrugs.push({name:'Atrakurium',unit:'mcg/kg/mnt',factor:1,typical_low:5,typical_high:10,concDefault:0.5,concUnit:'mg/mL',convert:0.001/60});
+      // Vekuronium
+      drugs.push({name:'Vekuronium',role:'Paralitik kontinyu (alt. rokuronium)',doseStr:'0.8–1.4 mcg/kg/mnt',totalStr:`${(bb*0.8).toFixed(2)}–${(bb*1.4).toFixed(2)} mcg/mnt`,conc:'0.1 mg/mL',volStr:'Lihat tabel SP',note:'Hati-hati akumulasi pada gagal ginjal.',color:'bg'});
+      spDrugs.push({name:'Vekuronium',unit:'mcg/kg/mnt',factor:1,typical_low:0.8,typical_high:1.4,concDefault:0.1,concUnit:'mg/mL',convert:0.001/60});
+
+    } else {
+      ctx=`Neonatus ${isPreterm?'preterm':'term'} · BB ${bb} kg · Obat Emergensi & Life Support`;
+      // Epinefrin cardiac arrest
+      drugs.push({name:'Epinefrin (Adrenalin)',role:'Cardiac arrest / Bradikardia berat',doseStr:'0.01–0.03 mg/kg IV/IO',totalStr:`${(bb*0.01).toFixed(3)}–${(bb*0.03).toFixed(3)} mg`,conc:'0.1 mg/mL (1:10.000)',volStr:`${(bb*0.01/0.1).toFixed(2)}–${(bb*0.03/0.1).toFixed(2)} mL`,note:'Ulangi tiap 3–5 mnt. Dosis ETT tidak direkomendasikan rutin.',color:'br'});
+      // Epinefrin infus
+      drugs.push({name:'Epinefrin infus',role:'Syok refrakter / PPHN / post-arrest',doseStr:'0.05–1 mcg/kg/mnt',totalStr:`${(bb*0.05).toFixed(3)}–${(bb*1).toFixed(3)} mcg/mnt`,conc:'4–40 mcg/mL',volStr:'Lihat SP',note:'Titrasi per respon HR & TD. Inkompatibel dg NaHCO₃.',color:'br'});
+      spDrugs.push({name:'Epinefrin infus',unit:'mcg/kg/mnt',factor:1,typical_low:0.05,typical_high:1,concDefault:0.04,concUnit:'mg/mL',convert:0.001/60});
+      // Norepinefrin
+      drugs.push({name:'Norepinefrin (NE)',role:'Syok distributif / sepsis',doseStr:'0.05–2 mcg/kg/mnt',totalStr:`${(bb*0.05).toFixed(3)}–${(bb*2).toFixed(3)} mcg/mnt`,conc:'4–40 mcg/mL',volStr:'Lihat SP',note:'Vasokonstriksi perifer dominan. Hindari NS jika infus lama.',color:'br'});
+      spDrugs.push({name:'Norepinefrin',unit:'mcg/kg/mnt',factor:1,typical_low:0.05,typical_high:2,concDefault:0.04,concUnit:'mg/mL',convert:0.001/60});
+      // Dopamin
+      drugs.push({name:'Dopamin',role:'Syok; efek renal dose 2–5 mcg/kg/mnt',doseStr:'2–20 mcg/kg/mnt',totalStr:`${(bb*2).toFixed(1)}–${(bb*20).toFixed(1)} mcg/mnt`,conc:'800 mcg/mL',volStr:`${(bb*2/800).toFixed(3)}–${(bb*20/800).toFixed(3)} mL/mnt`,note:'Renal dose 2–5: ↑GFR. Inotropik 5–10. Vasokonstriksi >10. Inkompatibel NaHCO₃.',color:'ba'});
+      spDrugs.push({name:'Dopamin',unit:'mcg/kg/mnt',factor:1,typical_low:2,typical_high:20,concDefault:0.8,concUnit:'mg/mL',convert:0.001/60});
+      // Dobutamin
+      drugs.push({name:'Dobutamin',role:'Disfungsi miokard; ↑kontraktilitas',doseStr:'5–20 mcg/kg/mnt',totalStr:`${(bb*5).toFixed(1)}–${(bb*20).toFixed(1)} mcg/mnt`,conc:'1–4 mg/mL',volStr:'Lihat SP',note:'Efek inotropik dominan. Kombinasi dg dopamin pada syok kardiogenik.',color:'ba'});
+      spDrugs.push({name:'Dobutamin',unit:'mcg/kg/mnt',factor:1,typical_low:5,typical_high:20,concDefault:1,concUnit:'mg/mL',convert:0.001/60});
+      // NaHCO3
+      const bicarDose=bb*2;
+      drugs.push({name:'NaHCO₃ 4.2% (encer)',role:'Asidosis metabolik berat (pH <7.10)',doseStr:'1–2 mEq/kg IV lambat',totalStr:`${(bb*1).toFixed(1)}–${bicarDose.toFixed(1)} mEq`,conc:'0.5 mEq/mL (4.2%)',volStr:`${(bb*1/0.5).toFixed(1)}–${(bicarDose/0.5).toFixed(1)} mL`,note:'⚠ Berikan pelan 1 mEq/kg/5mnt. 8.4% diencerkan 1:1 dg air steril. Pastikan ventilasi adekuat.',color:'ba'});
+      // Adenosin
+      drugs.push({name:'Adenosin',role:'SVT / takiaritmia supraventricular',doseStr:'0.1 mg/kg IV bolus cepat (max 6 mg)',totalStr:`${Math.min(bb*0.1,6).toFixed(2)} mg`,conc:'3 mg/mL',volStr:`${Math.min(bb*0.1,6).toFixed(2)/3} mL`,note:'Flush NaCl cepat segera setelah dosis. Ulangi 0.2 mg/kg jika tidak respon.',color:'purple'});
+      showSP=true;
+    }
+
+  } else {
+    // PEDIATRIK
+    const ageYr=parseFloat(document.getElementById('drugAge').value)||0;
+
+    if(category==='rsi'){
+      ctx=`Pediatrik · BB ${bb} kg · Usia ~${ageYr} thn · Protokol RSI (UNC/AAP Guideline)`;
+      const atr=Math.min(Math.max(bb*0.02,0.1),0.5);
+      drugs.push({name:'Atropin',role:'Vagolitik premedikasi',doseStr:'0.02 mg/kg (min 0.1, max 0.5 mg)',totalStr:`${atr.toFixed(3)} mg`,conc:'0.25 mg/mL',volStr:`${(atr/0.25).toFixed(2)} mL`,note:ageYr<8?'Wajib <8 thn atau jika pakai suksinilkolin.':'Pertimbangkan jika <8 thn.',color:'bt'});
+      const ketMax=Math.min(bb*2,200);
+      drugs.push({name:'Ketamin',role:'Induksi (pilihan 1 pediatrik)',doseStr:'1–2 mg/kg (max 200 mg)',totalStr:`${(bb*1).toFixed(1)}–${ketMax.toFixed(1)} mg`,conc:'10 mg/mL',volStr:`${(bb*1/10).toFixed(2)}–${(ketMax/10).toFixed(2)} mL`,note:'Stabilitas hemodinamik baik. Pilih pada syok. Hindari peningkatan TIK berat.',color:'bb'});
+      const etoMax=Math.min(bb*0.4,20);
+      drugs.push({name:'Etomidat',role:'Induksi alt. (TIK meningkat, >2 thn)',doseStr:'0.2–0.4 mg/kg (max 20 mg)',totalStr:`${(bb*0.2).toFixed(2)}–${etoMax.toFixed(2)} mg`,conc:'2 mg/mL',volStr:`${(bb*0.2/2).toFixed(2)}–${(etoMax/2).toFixed(2)} mL`,note:'HINDARI pada sepsis (supresi adrenal). Efek hemodinamik minimal.',color:'ba'});
+      const midMax=Math.min(bb*0.1,5);
+      drugs.push({name:'Midazolam',role:'Sedasi / induksi kombinasi',doseStr:'0.1 mg/kg (max 5 mg)',totalStr:`${midMax.toFixed(3)} mg`,conc:'5 mg/mL',volStr:`${(midMax/5).toFixed(2)} mL`,note:'Onset lambat 3–5 mnt. Sering dikombinasi dg fentanil.',color:'ba'});
+      const fentMax=Math.min(bb*3,200);
+      drugs.push({name:'Fentanil',role:'Analgesik preinduksi',doseStr:'1–3 mcg/kg',totalStr:`${(bb*1).toFixed(1)}–${fentMax.toFixed(1)} mcg`,conc:'50 mcg/mL',volStr:`${(bb*1/50).toFixed(2)}–${(fentMax/50).toFixed(2)} mL`,note:'Waspada chest rigidity dosis tinggi.',color:'bb'});
+      const rocMax=Math.min(bb*1,100);
+      drugs.push({name:'Rokuronium',role:'Paralitik lini 1',doseStr:'1 mg/kg (max 100 mg)',totalStr:`${rocMax.toFixed(1)} mg`,conc:'10 mg/mL',volStr:`${(rocMax/10).toFixed(2)} mL`,note:'Sugammadex reversal 16 mg/kg. Onset 60–90 det.',color:'bg'});
+      let suxD=ageYr<1?bb*2:Math.min(bb*1.5,150);
+      drugs.push({name:'Suksinilkolin',role:'Paralitik short-acting',doseStr:ageYr<1?'2 mg/kg':'1.5 mg/kg (max 150 mg)',totalStr:`${suxD.toFixed(1)} mg`,conc:'20 mg/mL',volStr:`${(suxD/20).toFixed(2)} mL`,note:'KI: miopati, hiperkalemia, luka bakar >6 jam, NMD.',color:'bg'});
+      drugs.push({name:'Atrakurium',role:'Paralitik alt. (gagal ginjal/hati)',doseStr:'0.5 mg/kg IV bolus',totalStr:`${(bb*0.5).toFixed(2)} mg`,conc:'10 mg/mL',volStr:`${(bb*0.5/10).toFixed(2)} mL`,note:'Metabolisme Hofmann. Tidak perlu reversal. Encerkan dg NS.',color:'bg'});
+
+    } else if(category==='cont'){
+      ctx=`Pediatrik · BB ${bb} kg · Usia ~${ageYr} thn · Sedasi/Analgesik Kontinyu (Syringe Pump)`;
+      showSP=true;
+      drugs.push({name:'Morfin',role:'Analgesik kontinyu (lini 1)',doseStr:'20–80 mcg/kg/jam',totalStr:`${(bb*20).toFixed(0)}–${(bb*80).toFixed(0)} mcg/jam`,conc:'0.5–2 mg/mL',volStr:'Lihat SP',note:'Loading 50–100 mcg/kg bolus lambat.',color:'bb'});
+      spDrugs.push({name:'Morfin',unit:'mcg/kg/jam',factor:1,typical_low:20,typical_high:80,concDefault:0.5,concUnit:'mg/mL',convert:0.001});
+      drugs.push({name:'Fentanil',role:'Analgesik kontinyu (alt. morfin)',doseStr:'1–5 mcg/kg/jam',totalStr:`${(bb*1).toFixed(1)}–${(bb*5).toFixed(1)} mcg/jam`,conc:'10–50 mcg/mL',volStr:'Lihat SP',note:'Titrasi per kebutuhan. Waspada toleransi jika >72 jam.',color:'bb'});
+      spDrugs.push({name:'Fentanil',unit:'mcg/kg/jam',factor:1,typical_low:1,typical_high:5,concDefault:10,concUnit:'mcg/mL',convert:1});
+      drugs.push({name:'Midazolam',role:'Sedasi kontinyu',doseStr:'0.04–0.4 mg/kg/jam',totalStr:`${(bb*0.04).toFixed(2)}–${(bb*0.4).toFixed(2)} mg/jam`,conc:'0.5–1 mg/mL',volStr:'Lihat SP',note:'Mulai 0.04 mg/kg/jam; titrasi naik. Toleransi > 3 hari.',color:'ba'});
+      spDrugs.push({name:'Midazolam',unit:'mcg/kg/jam',factor:1000,typical_low:40,typical_high:400,concDefault:0.5,concUnit:'mg/mL',convert:0.001});
+      drugs.push({name:'Ketamin',role:'Sedasi/analgesik kontinyu (bronkodilator)',doseStr:'0.2–1 mg/kg/jam',totalStr:`${(bb*0.2).toFixed(2)}–${(bb*1).toFixed(2)} mg/jam`,conc:'1–2 mg/mL',volStr:'Lihat SP',note:'Keunggulan: bronkodilator (asma), analgesia+sedasi. Hindari kombinasi dg benzodiazepine satu syringe.',color:'bb'});
+      spDrugs.push({name:'Ketamin',unit:'mg/kg/jam',factor:1,typical_low:0.2,typical_high:1,concDefault:1,concUnit:'mg/mL',convert:1});
+      drugs.push({name:'Deksmedetomidin',role:'Sedasi ringan-sedang (tidak depresi napas)',doseStr:'0.2–0.7 mcg/kg/jam',totalStr:`${(bb*0.2).toFixed(2)}–${(bb*0.7).toFixed(2)} mcg/jam`,conc:'4–8 mcg/mL',volStr:'Lihat SP',note:'Loading 0.5–1 mcg/kg/10 mnt opsional. Keunggulan: tidak depresi napas, dapat dipakai saat weaning.',color:'bt'});
+      spDrugs.push({name:'Deksmedetomidin',unit:'mcg/kg/jam',factor:1,typical_low:0.2,typical_high:0.7,concDefault:0.004,concUnit:'mg/mL',convert:0.001});
+      drugs.push({name:'Atrakurium',role:'Paralitik kontinyu (gagal organ, ARDS berat)',doseStr:'5–10 mcg/kg/mnt',totalStr:`${(bb*5).toFixed(0)}–${(bb*10).toFixed(0)} mcg/mnt`,conc:'0.5–1 mg/mL',volStr:'Lihat SP',note:'Loading 0.5 mg/kg. Tidak butuh reversal. Encerkan dg NS.',color:'bg'});
+      spDrugs.push({name:'Atrakurium',unit:'mcg/kg/mnt',factor:1,typical_low:5,typical_high:10,concDefault:0.5,concUnit:'mg/mL',convert:0.001/60});
+
+    } else {
+      ctx=`Pediatrik · BB ${bb} kg · Usia ~${ageYr} thn · Obat Emergensi & Life Support`;
+      showSP=true;
+      // Epinefrin cardiac arrest
+      drugs.push({name:'Epinefrin (Adrenalin)',role:'Cardiac arrest (bolus)',doseStr:'0.01 mg/kg IV/IO (max 1 mg)',totalStr:`${Math.min(bb*0.01,1).toFixed(3)} mg`,conc:'0.1 mg/mL (1:10.000)',volStr:`${Math.min(bb*0.01,1).toFixed(3)/0.1} mL`,note:'Ulangi tiap 3–5 mnt. IO jika akses IV tidak ada.',color:'br'});
+      // Epinefrin infus
+      drugs.push({name:'Epinefrin infus',role:'Syok (anafilaksis, sepsis refrakter)',doseStr:'0.05–1 mcg/kg/mnt',totalStr:`${(bb*0.05).toFixed(2)}–${(bb*1).toFixed(2)} mcg/mnt`,conc:'4–40 mcg/mL',volStr:'Lihat SP',note:'Titrasi per respon HR & TD.',color:'br'});
+      spDrugs.push({name:'Epinefrin infus',unit:'mcg/kg/mnt',factor:1,typical_low:0.05,typical_high:1,concDefault:0.004,concUnit:'mg/mL',convert:0.001/60});
+      // Norepinefrin
+      drugs.push({name:'Norepinefrin',role:'Syok distributif / sepsis',doseStr:'0.05–2 mcg/kg/mnt',totalStr:`${(bb*0.05).toFixed(2)}–${(bb*2).toFixed(2)} mcg/mnt`,conc:'4–40 mcg/mL',volStr:'Lihat SP',note:'Vasokonstriksi + inotropik moderat.',color:'br'});
+      spDrugs.push({name:'Norepinefrin',unit:'mcg/kg/mnt',factor:1,typical_low:0.05,typical_high:2,concDefault:0.004,concUnit:'mg/mL',convert:0.001/60});
+      // Dopamin
+      drugs.push({name:'Dopamin',role:'Syok kardiogenik / sepsis (inotropik)',doseStr:'5–20 mcg/kg/mnt (max 20)',totalStr:`${Math.min(bb*5,bb*5).toFixed(0)}–${Math.min(bb*20,bb*20).toFixed(0)} mcg/mnt`,conc:'800–3200 mcg/mL',volStr:'Lihat SP',note:'Renal dose 2–5. Inotropik 5–10. Vasopresor >10.',color:'ba'});
+      spDrugs.push({name:'Dopamin',unit:'mcg/kg/mnt',factor:1,typical_low:5,typical_high:20,concDefault:0.8,concUnit:'mg/mL',convert:0.001/60});
+      // Dobutamin
+      drugs.push({name:'Dobutamin',role:'Gagal jantung / syok kardiogenik',doseStr:'5–20 mcg/kg/mnt',totalStr:`${(bb*5).toFixed(0)}–${(bb*20).toFixed(0)} mcg/mnt`,conc:'1–4 mg/mL',volStr:'Lihat SP',note:'Inotropik dominan. Kombinasi dg dopamin atau NE.',color:'ba'});
+      spDrugs.push({name:'Dobutamin',unit:'mcg/kg/mnt',factor:1,typical_low:5,typical_high:20,concDefault:1,concUnit:'mg/mL',convert:0.001/60});
+      // Adenosin
+      drugs.push({name:'Adenosin',role:'SVT pediatrik (takiaritmia)',doseStr:'0.1 mg/kg bolus cepat (max 6 mg)',totalStr:`${Math.min(bb*0.1,6).toFixed(2)} mg`,conc:'3 mg/mL',volStr:`${(Math.min(bb*0.1,6)/3).toFixed(2)} mL`,note:'Flush NS cepat segera. Ulangi 0.2 mg/kg jika gagal (max 12 mg).',color:'purple'});
+      // Amiodarone
+      const amiMax=Math.min(bb*5,300);
+      drugs.push({name:'Amiodarone',role:'VF/pVT refrakter defibrilasi',doseStr:'5 mg/kg IV (max 300 mg)',totalStr:`${amiMax.toFixed(1)} mg`,conc:'6 mg/mL (larutkan dg D5W)',volStr:`${(amiMax/6).toFixed(2)} mL`,note:'Berikan bolus 20–60 mnt (bukan cepat kecuali VF).',color:'purple'});
+      // NaHCO3
+      const bicarD=Math.min(bb*1,50);
+      drugs.push({name:'NaHCO₃ 8.4% (1 mEq/mL)',role:'Asidosis metabolik berat pH <7.10',doseStr:'1–2 mEq/kg IV lambat',totalStr:`${bicarD.toFixed(1)}–${Math.min(bb*2,100).toFixed(1)} mEq`,conc:'1 mEq/mL (8.4%)',volStr:`${bicarD.toFixed(1)}–${Math.min(bb*2,100).toFixed(1)} mL`,note:'Encerkan 1:1 dg air steril pada bayi/kecil. Berikan pelan, ventilasi adekuat.',color:'ba'});
+      // Kalsium glukonat
+      drugs.push({name:'Kalsium Glukonat 10%',role:'Hipokalsemia, hiperkalemia, overdosis CCB',doseStr:'60–100 mg/kg IV (max 2000 mg)',totalStr:`${(bb*60).toFixed(0)}–${Math.min(bb*100,2000).toFixed(0)} mg`,conc:'100 mg/mL (10%)',volStr:`${(bb*60/100).toFixed(2)}–${(Math.min(bb*100,2000)/100).toFixed(2)} mL`,note:'Berikan lambat. Monitor bradikardi. Gunakan CaGlukonat (bukan CaCl kecuali darurat).',color:'bt'});
+    }
+  }
+
+  // Render tabel
+  document.getElementById('drug-context').textContent=ctx;
+  const tbody=document.getElementById('drug-tbody');
+  tbody.innerHTML=drugs.map(d=>`
+    <tr>
+      <td><div class="drug-name">${d.name}</div><div style="font-size:11px;color:var(--muted)">${d.role}</div></td>
+      <td>${d.doseStr}</td>
+      <td class="dose-val">${d.totalStr}</td>
+      <td style="font-size:11px;color:var(--muted)">${d.conc}</td>
+      <td class="vol-val">${d.volStr}</td>
+      <td style="font-size:11px;color:var(--muted)">${d.note}</td>
+    </tr>`).join('');
+  document.getElementById('drug-results').classList.remove('hidden');
+
+  // Syringe pump section
+  const spSection=document.getElementById('syringepump-section');
+  if(showSP && spDrugs.length>0){
+    spSection.classList.remove('hidden');
+    document.getElementById('spBB').value=bb;
+    const spSelect=document.getElementById('spDrug');
+    spSelect.innerHTML='<option value="">-- pilih obat --</option>';
+    window._spDrugsData=spDrugs;
+    window._spBB=bb;
+    spDrugs.forEach((d,i)=>{
+      spSelect.innerHTML+=`<option value="${i}">${d.name} (${d.unit})</option>`;
+    });
+    updateSpForm();
+    document.getElementById('sp-result').classList.add('hidden');
+  } else {
+    spSection.classList.add('hidden');
+  }
+}
+
+function updateSpForm(){
+  const sel=document.getElementById('spDrug');
+  const idx=parseInt(sel.value);
+  const drugs=window._spDrugsData||[];
+  if(isNaN(idx)||!drugs[idx]){return;}
+  const d=drugs[idx];
+  document.getElementById('sp-dose-label').textContent=`Dosis target (${d.unit})`;
+  document.getElementById('sp-unit').textContent=d.unit;
+  document.getElementById('spDose').placeholder=`${d.typical_low}–${d.typical_high}`;
+  document.getElementById('spConc').value=d.concDefault;
+  document.getElementById('sp-conc-unit').textContent=d.concUnit;
+}
+
+function calcSyringePump(){
+  const idx=parseInt(document.getElementById('spDrug').value);
+  const drugs=window._spDrugsData||[];
+  if(isNaN(idx)||!drugs[idx]){alert('Pilih obat terlebih dahulu');return;}
+  const d=drugs[idx];
+  const dose=parseFloat(document.getElementById('spDose').value);
+  const conc=parseFloat(document.getElementById('spConc').value);
+  const bb=parseFloat(document.getElementById('spBB').value)||window._spBB||1;
+  if(!dose||!conc||!bb){alert('Lengkapi semua field');return;}
+
+  // Kalkulasi: rate (mL/jam) = dosis_per_mnt_atau_jam × BB / konsentrasi
+  // Normalize semua ke amount/kg/jam
+  let amtPerKgHour;
+  if(d.unit.includes('mnt')){
+    amtPerKgHour=dose*60; // convert mnt ke jam
+  } else {
+    amtPerKgHour=dose;
+  }
+  // Satuan: konversi ke unit yang sama dg konsentrasi
+  // concDefault dalam mg/mL, dosis dalam mcg: perlu *0.001
+  // concDefault dalam mcg/mL, dosis dalam mcg: *1
+  let amtMgPerKgHour;
+  if(d.concUnit.includes('mcg')){
+    // conc sudah mcg/mL, dose dalam mcg/kg/jam
+    amtMgPerKgHour=amtPerKgHour/1000; // ke mg
+    const rateML=amtMgPerKgHour*bb/(conc/1000); // conc mcg/mL → mg/mL = /1000
+    displaySPResult(d,dose,conc,bb,rateML);
+  } else {
+    // conc dalam mg/mL
+    if(d.unit.includes('mcg')){
+      amtMgPerKgHour=amtPerKgHour/1000;
+    } else {
+      amtMgPerKgHour=amtPerKgHour;
+    }
+    const rateML=amtMgPerKgHour*bb/conc;
+    displaySPResult(d,dose,conc,bb,rateML);
+  }
+}
+
+function displaySPResult(d,dose,conc,bb,rateML){
+  const grid=document.getElementById('sp-result-grid');
+  const note=document.getElementById('sp-formula-note');
+  grid.innerHTML=`
+    <div class="pump-result">
+      <div class="plabel">Kecepatan Syringe Pump</div>
+      <div class="pval">${rateML.toFixed(2)} mL/jam</div>
+      <div class="psub">${d.name} · ${dose} ${d.unit} · BB ${bb} kg</div>
+    </div>
+    <div class="pump-result">
+      <div class="plabel">Dosis Total per Jam</div>
+      <div class="pval">${d.unit.includes('mcg')?((d.unit.includes('mnt')?dose*60:dose)*bb).toFixed(1):((d.unit.includes('mnt')?dose*60:dose)*bb).toFixed(3)} ${d.unit.includes('mcg')?'mcg':'mg'}/jam</div>
+      <div class="psub">BB ${bb} kg · Konsentrasi ${conc} ${d.concUnit}</div>
+    </div>
+    <div class="pump-result">
+      <div class="plabel">Dosis per 24 Jam</div>
+      <div class="pval">${(rateML*24).toFixed(1)} mL/24 jam</div>
+      <div class="psub">Total volume syringe 24 jam</div>
+    </div>`;
+  note.innerHTML=`<strong>Formula:</strong> Rate (mL/jam) = [Dosis (${d.unit}) × BB (kg) × konversi] ÷ Konsentrasi (${d.concUnit}). Verifikasi selalu sebelum pemberian.`;
+  document.getElementById('sp-result').classList.remove('hidden');
+}
+
+// ===== ABG INTERPRETER =====
+function calcABG(){
+  const pH=parseFloat(document.getElementById('abgPH').value);
+  const pco2=parseFloat(document.getElementById('abgCO2').value);
+  const po2=parseFloat(document.getElementById('abgO2').value);
+  const hco3=parseFloat(document.getElementById('abgHCO3').value);
+  const be=parseFloat(document.getElementById('abgBE').value)||0;
+  const spo2=parseFloat(document.getElementById('abgSpO2').value)||0;
+  const fio2=parseFloat(document.getElementById('abgFiO2').value)||0.21;
+  const map_val=parseFloat(document.getElementById('abgMAP').value)||0;
+  const pt=document.getElementById('abgPatient').value;
+  if(isNaN(pH)||isNaN(pco2)||isNaN(hco3)){alert('Masukkan pH, PaCO₂, dan HCO₃⁻');return;}
+
+  // ===== STEP 1: Asam-Basa =====
+  let acidBaseStatus='';
+  let primDx='';
+  let comp='';
+
+  // pH klasifikasi
+  const phNormal=pH>=7.35&&pH<=7.45;
+  const acidosis=pH<7.35;
+  const alkalosis=pH>7.45;
+
+  // Gangguan primer
+  const respAcid=pco2>45;
+  const respAlk=pco2<35;
+  const metAcid=hco3<22||be<-2;
+  const metAlk=hco3>26||be>2;
+
+  if(phNormal){
+    if(!respAcid&&!respAlk&&!metAcid&&!metAlk) primDx='Normal';
+    else if(respAcid&&metAlk) primDx='Asidosis respiratorik + alkalosis metabolik (kompensasi)';
+    else if(respAlk&&metAcid) primDx='Alkalosis respiratorik + asidosis metabolik (kompensasi)';
+    else primDx='Gangguan campuran (mixed)';
+  } else if(acidosis){
+    if(pco2>45&&hco3>=22) primDx='Asidosis Respiratorik (murni atau kompensasi metabolik belum adekuat)';
+    else if(hco3<22&&pco2<=45) primDx='Asidosis Metabolik (murni)';
+    else if(pco2>45&&hco3<22) primDx='Asidosis Campuran (Respiratorik + Metabolik)';
+    else primDx='Asidosis (evaluasi lebih lanjut)';
+  } else {
+    if(pco2<35&&hco3<=26) primDx='Alkalosis Respiratorik (murni atau kompensasi metabolik belum adekuat)';
+    else if(hco3>26&&pco2>=35) primDx='Alkalosis Metabolik (murni)';
+    else if(pco2<35&&hco3>26) primDx='Alkalosis Campuran (Respiratorik + Metabolik)';
+    else primDx='Alkalosis (evaluasi lebih lanjut)';
+  }
+
+  // ===== STEP 2: Anion Gap (jika ada Na — estimasi saja) =====
+  let agNote='';
+  // Tidak ada Na di input, jadi hanya keterangan
+  if(metAcid){
+    agNote='Evaluasi anion gap (butuh Na): AG normal = 8–12 mEq/L. AG tinggi: laktat, ketoasidosis, gagal ginjal, toksik (MUDPILES). AG normal: diare, RTA, kehilangan HCO₃.';
+  }
+
+  // ===== STEP 3: Kompensasi =====
+  let compNote='';
+  if(primDx.includes('Respiratorik')){
+    if(acidosis){
+      const expectedHCO3_acute=24+(pco2-40)*0.1;
+      const expectedHCO3_chronic=24+(pco2-40)*0.35;
+      compNote=`Kompensasi metabolik: HCO₃⁻ diharapkan ${expectedHCO3_acute.toFixed(1)} (akut) atau ${expectedHCO3_chronic.toFixed(1)} (kronik). Nilai aktual HCO₃⁻ = ${hco3}. ${hco3<expectedHCO3_acute-2?'→ Kemungkinan kompensasi belum adekuat atau ada asidosis metabolik tambahan.':hco3>expectedHCO3_chronic+2?'→ Kemungkinan ada alkalosis metabolik tambahan.':'→ Kompensasi adekuat.'}`;
+    } else {
+      const expectedHCO3_acute=24-(40-pco2)*0.2;
+      const expectedHCO3_chronic=24-(40-pco2)*0.5;
+      compNote=`Kompensasi metabolik: HCO₃⁻ diharapkan ${expectedHCO3_acute.toFixed(1)} (akut) atau ${expectedHCO3_chronic.toFixed(1)} (kronik). Nilai aktual = ${hco3}.`;
+    }
+  } else if(primDx.includes('Metabolik')){
+    if(acidosis){
+      const expectedPCO2=1.5*hco3+8;
+      const winterLow=expectedPCO2-2, winterHigh=expectedPCO2+2;
+      compNote=`Winter's rule: PaCO₂ diharapkan ${winterLow.toFixed(0)}–${winterHigh.toFixed(0)} mmHg. Aktual = ${pco2}. ${pco2<winterLow?'→ Ada alkalosis respiratorik tambahan.':pco2>winterHigh?'→ Ada asidosis respiratorik tambahan / ventilasi tidak adekuat.':'→ Kompensasi respiratorik adekuat.'}`;
+    } else {
+      compNote=`Kompensasi respiratorik alkalosis metabolik: PaCO₂ diharapkan ~40+0.7×(HCO₃⁻-24) = ${(40+0.7*(hco3-24)).toFixed(1)} mmHg. Aktual = ${pco2}.`;
+    }
+  }
+
+  // ===== STEP 4: Oksigenasi =====
+  let oxyNote='';
+  let oxyClass='';
+  let oi=0, pf=0;
+  if(po2&&fio2){
+    pf=po2/fio2;
+    if(map_val>0) oi=(map_val*fio2*100)/po2;
+    let pfInterp='', pfClass='';
+    if(pf>=300){pfInterp='Normal';pfClass='abg-normal';}
+    else if(pf>=200){pfInterp='Hipoksemia ringan (ARDS ringan)';pfClass='abg-mild';}
+    else if(pf>=100){pfInterp='Hipoksemia sedang (ARDS sedang)';pfClass='abg-severe';}
+    else{pfInterp='Hipoksemia berat (ARDS berat)';pfClass='abg-severe';}
+    oxyNote=`PaO₂/FiO₂ = ${pf.toFixed(0)} → ${pfInterp}`;
+    if(oi>0) oxyNote+=` · OI = ${oi.toFixed(1)} (${oi>=16?'ARDS berat':oi>=8?'ARDS sedang':oi>=4?'ARDS ringan':'Normal'})`;
+    oxyClass=pfClass;
+  }
+
+  // Target per kondisi
+  let targetNote='';
+  if(pt==='neo_preterm') targetNote='Target preterm: pH 7.25–7.35, PaCO₂ 45–55 (permissive), PaO₂ 45–65, SpO₂ 90–95%.';
+  else if(pt==='neo_term') targetNote='Target neonatus term: pH 7.30–7.40, PaCO₂ 40–50, PaO₂ 50–80, SpO₂ 91–95%.';
+  else targetNote='Target pediatrik: pH 7.35–7.45, PaCO₂ 35–45, PaO₂ 80–100, SpO₂ 94–98%. (Sesuaikan per kondisi klinis)';
+
+  // ===== Saran Ventilator =====
+  let ventSugg=[];
+  if(primDx.includes('Asidosis Respiratorik')||primDx.includes('Asidosis Campuran')){
+    ventSugg.push('↑ RR (bertahap +5 bpm) ATAU ↑ VT (hati-hati Pplat &lt;28)');
+    ventSugg.push('Periksa posisi ETT, obstruksi, atau auto-PEEP');
+    if(pco2>60) ventSugg.push('PaCO₂ &gt;60 atau pH &lt;7.20 pada neonatus: pertimbangkan eskalasi setting segera');
+  }
+  if(primDx.includes('Alkalosis Respiratorik')){
+    ventSugg.push('↓ RR (bertahap) ATAU ↓ VT untuk menaikkan PaCO₂');
+    ventSugg.push('Target PaCO₂ sesuai kondisi (jangan overcorrect pada PPHN atau HIE)');
+  }
+  if(primDx.includes('Hipoksemia')||oxyNote.includes('Hipoksemia')){
+    ventSugg.push('↑ FiO₂ (titrasi bertahap)');
+    ventSugg.push('Pertimbangkan ↑ PEEP (rekruitmen alveoli)');
+    if(pf<200) ventSugg.push('PARDS moderate-berat: PEEP 8–15, VT 4–6 mL/kg IBW');
+  }
+  if(metAcid){
+    ventSugg.push('Asidosis metabolik: koreksi penyebab primer (hipovolemia, sepsis, hiperglikemia)');
+    ventSugg.push('NaHCO₃ hanya jika pH &lt;7.10 DAN ventilasi adekuat');
+  }
+
+  // ===== RENDER =====
+  const phClass=phNormal?'abg-normal':acidosis?'abg-severe':'abg-mild';
+  let html=`
+  <div class="abg-result ${phClass}">
+    <div class="abg-label" style="color:${phNormal?'var(--green)':acidosis?'var(--red)':'var(--amber)'}">Keseimbangan Asam-Basa</div>
+    <div class="abg-interp">${primDx}</div>
+    <div class="abg-detail">pH = ${pH} · PaCO₂ = ${pco2} · HCO₃⁻ = ${hco3} · BE = ${be}</div>
+  </div>`;
+
+  if(compNote) html+=`<div class="abg-result abg-mild" style="margin-top:6px">
+    <div class="abg-label" style="color:var(--amber)">Evaluasi Kompensasi</div>
+    <div class="abg-detail">${compNote}</div>
+  </div>`;
+
+  if(agNote) html+=`<div class="abg-result abg-mild" style="margin-top:6px">
+    <div class="abg-label" style="color:var(--amber)">Anion Gap & Metabolik</div>
+    <div class="abg-detail">${agNote}</div>
+  </div>`;
+
+  if(oxyNote) html+=`<div class="abg-result ${oxyClass}" style="margin-top:6px">
+    <div class="abg-label" style="color:${pf>=300?'var(--green)':pf>=200?'var(--amber)':'var(--red)'}">Oksigenasi</div>
+    <div class="abg-interp">${oxyNote}</div>
+  </div>`;
+
+  html+=`<div class="abg-result abg-normal" style="margin-top:6px">
+    <div class="abg-label" style="color:var(--green)">Target & Konteks Klinis</div>
+    <div class="abg-detail">${targetNote}</div>
+  </div>`;
+
+  if(ventSugg.length>0){
+    html+=`<div class="abg-result abg-mild" style="margin-top:6px">
+      <div class="abg-label" style="color:var(--blue)">Saran Penyesuaian Ventilator</div>
+      <ul style="padding-left:16px;margin-top:4px">${ventSugg.map(s=>`<li style="font-size:12px;margin-bottom:3px">${s}</li>`).join('')}</ul>
+    </div>`;
+  }
+
+  html+=`<div class="warn" style="margin-top:8px;margin-bottom:0"><strong>⚠ Disclaimer Klinis</strong>Interpretasi AGD ini bersifat panduan. Keputusan klinis tetap berdasarkan kondisi pasien secara keseluruhan. Konfirmasi dengan SpA/neonatologis untuk kasus kompleks.</div>`;
+
+  document.getElementById('abg-result-content').innerHTML=html;
+  document.getElementById('abg-results').classList.remove('hidden');
+}
+
+// ===== RSBI CALCULATOR =====
+function calcRSBI(){
+  const rr=parseFloat(document.getElementById('rsbRR').value);
+  const vt=parseFloat(document.getElementById('rsbVT').value);
+  const bb=parseFloat(document.getElementById('rsbBB').value);
+  const pt=document.getElementById('rsbPatient').value;
+  const mip=parseFloat(document.getElementById('rsbMIP').value)||null;
+  const peep=parseFloat(document.getElementById('rsbPEEP').value)||0;
+  if(!rr||!vt||!bb){alert('Masukkan RR, VT, dan BB');return;}
+
+  const vtL=vt/1000;
+  const vtPerKg=vt/bb;
+  const rsbi=rr/vtL;
+  const prsbi=rr/vtPerKg; // = rsbi/bb = rr×bb/vt(mL)... wait: pRSBI = RR / (VT mL/kg) = RR*BB/VT(mL)... 
+  // pRSBI unit: breaths/min / (mL/kg) = breaths*kg/min/mL
+  const prsbiVal=rr/vtPerKg;
+
+  // Interpretasi RSBI
+  let rsbiInterp='',rsbiColor='',rsbiRec='';
+  if(pt==='neo'){
+    if(prsbiVal<8){rsbiInterp='Baik — Siap Ekstubasi';rsbiColor='var(--green)';rsbiRec='pRSBI < 8: Kemungkinan sukses ekstubasi tinggi. Nilai kriteria lain sebelum eksekusi.';}
+    else if(prsbiVal<=11){rsbiInterp='Borderline';rsbiColor='var(--amber)';rsbiRec='pRSBI 8–11: Lanjutkan SBT lebih lama (5–10 mnt). Evaluasi ulang.';}
+    else{rsbiInterp='Risiko Gagal Ekstubasi';rsbiColor='var(--red)';rsbiRec='pRSBI > 11: Kemungkinan gagal ekstubasi tinggi. Optimalkan kondisi terlebih dahulu.';}
+  } else {
+    if(rsbi<80){rsbiInterp='Baik — Pertimbangkan Ekstubasi';rsbiColor='var(--green)';rsbiRec='RSBI < 80: Prediksi weaning sukses. Evaluasi kriteria klinis lengkap.';}
+    else if(rsbi<=105){rsbiInterp='Borderline';rsbiColor='var(--amber)';rsbiRec='RSBI 80–105: SBT lebih lama; evaluasi faktor penghambat (sekret, edema, sedasi).';}
+    else{rsbiInterp='Risiko Gagal Weaning';rsbiColor='var(--red)';rsbiRec='RSBI > 105: Weaning kemungkinan gagal. Identifikasi & koreksi penyebab.';}
+  }
+
+  // VT/kg interpretasi
+  let vtInterp='';
+  if(vtPerKg<4) vtInterp='⚠ VT sangat rendah — cek sumbatan, compliance, atau posisi ETT';
+  else if(vtPerKg<5.5) vtInterp='VT rendah-normal';
+  else if(vtPerKg<=8) vtInterp='VT dalam range optimal';
+  else vtInterp='⚠ VT > 8 mL/kg — risiko volutrauma; kurangi support ventilator';
+
+  // MIP interpretasi
+  let mipInterp='';
+  if(mip&&mip<0){
+    const mipAbs=Math.abs(mip);
+    if(mipAbs>=30) mipInterp=`MIP/NIF = ${mip} cmH₂O → Baik (≥ -30). Kekuatan otot napas memadai.`;
+    else if(mipAbs>=20) mipInterp=`MIP/NIF = ${mip} cmH₂O → Borderline (-20 s/d -30). Monitor ketat.`;
+    else mipInterp=`MIP/NIF = ${mip} cmH₂O → Lemah (< -20). Kekuatan otot tidak memadai untuk ekstubasi.`;
+  }
+
+  let html=`
+  <div class="rsbi-box">
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--purple);margin-bottom:4px">${pt==='neo'?'pRSBI':'RSBI'} — Hasil Kalkulasi</div>
+    <div class="rsbi-value" style="color:${rsbiColor}">${pt==='neo'?prsbiVal.toFixed(1)+' bpm·kg/mL':rsbi.toFixed(0)+' breaths/mnt/L'}</div>
+    <div class="rsbi-interp" style="color:${rsbiColor}">${rsbiInterp}</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:4px">${rsbiRec}</div>
+  </div>
+  <div class="result-grid" style="margin-top:10px">
+    <div class="result-card">
+      <div class="result-label">RR Spontan</div>
+      <div class="result-value">${rr}</div>
+      <div class="result-sub">napas/menit</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">VT Spontan</div>
+      <div class="result-value">${vt} mL</div>
+      <div class="result-sub">${vtPerKg.toFixed(1)} mL/kg · ${vtInterp}</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">RSBI</div>
+      <div class="result-value">${rsbi.toFixed(0)}</div>
+      <div class="result-sub">breaths/mnt/L</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">pRSBI</div>
+      <div class="result-value">${prsbiVal.toFixed(1)}</div>
+      <div class="result-sub">bpm·kg/mL (neonatus/bayi)</div>
+    </div>
+  </div>`;
+
+  if(mipInterp) html+=`<div class="formula-note" style="margin-top:8px">${mipInterp}</div>`;
+  if(peep>5) html+=`<div class="warn" style="margin-top:8px;margin-bottom:0"><strong>⚠ PEEP Saat Ini ${peep} cmH₂O</strong>Pastikan RSBI diukur pada support minimal (PEEP 5, PS ≤8 cmH₂O). RSBI pada support tinggi tidak valid untuk prediksi ekstubasi.</div>`;
+
+  document.getElementById('rsbi-result-content').innerHTML=html;
+  document.getElementById('rsbi-results').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
